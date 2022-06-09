@@ -1,0 +1,2 @@
+class Tender < ApplicationRecord
+end

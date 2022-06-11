@@ -11,4 +11,7 @@
   <%= @tender.specifications %>
   <%= @tender.estimated_start_date %>
   <%= @tender.estimated_end_date %>
+
+   <%= link_to("Place a bid", new_tender_bid_path(@tender)) %>
+
 </div>

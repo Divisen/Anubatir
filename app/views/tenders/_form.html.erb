@@ -5,6 +5,9 @@
         <%= f.input :description %>
         <%= f.input :nature_of_works %>
         <%= f.input :estimated_budget %>
+        <%= f.input :images, as: :file,
+                    input_html: {multiple: true},
+                    label: "Upload images"%>
         <%= f.input :location %>
         <%= f.input :specifications %>
         <%= f.input :estimated_start_date,

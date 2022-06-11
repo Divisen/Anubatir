@@ -41,7 +41,7 @@ class TendersController < ApplicationController
   private
 
   def tender_params
-    params.require(:tender).permit(:estimated_budget, :description, :nature_of_works, :location, :specifications, :estimated_start_date, :estimated_end_date)
+    params.require(:tender).permit(:estimated_budget, :description, :nature_of_works, :location, :specifications, :estimated_start_date, :estimated_end_date, images:[])
   end
 
   def set_tender

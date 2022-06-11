@@ -1,11 +1,11 @@
 
 <div class="container">
   <%= @tender.estimated_budget %>
-  <% @tender.images.each do |image| %>
-          <%= cl_image_tag image.key%>
-        <% end %>
+  <%# <% @tender.images.each do |image| %>
+          <%# <%= cl_image_tag image.key%> %>
+        <%# <% end %> %> %>
   <%= @tender.description %>
-  <%= @tender.building_documents %>
+  <%# <%= @tender.building_documents %> %>
   <%= @tender.nature_of_works %>
   <%= @tender.location %>
   <%= @tender.specifications %>

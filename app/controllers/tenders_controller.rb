@@ -1,5 +1,5 @@
 class TendersController < ApplicationController
-  before_action :set_tender, only: [:show, :create, :edit, :update, :destroy]
+  before_action :set_tender, only: [:show, :edit, :update, :destroy]
 
   def index
     @tenders = Tender.all
@@ -13,6 +13,7 @@ class TendersController < ApplicationController
   end
 
   def create
+    @tender = Tender.new(tender_params)
     @tender.user = current_user
     if @tender.save
       redirect_to tender_path(@tender)

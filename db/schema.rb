@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_11_082233) do
+ActiveRecord::Schema.define(version: 2022_06_11_083340) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +50,7 @@ ActiveRecord::Schema.define(version: 2022_06_11_082233) do
     t.bigint "tender_id", null: false
     t.bigint "user_id", null: false
     t.float "quote"
+    t.boolean "approved"
     t.index ["tender_id"], name: "index_bids_on_tender_id"
     t.index ["user_id"], name: "index_bids_on_user_id"
   end

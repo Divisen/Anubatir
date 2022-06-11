@@ -40,6 +40,9 @@ gem 'pundit'
 # CLOUDINARY
 gem 'cloudinary', '~> 1.16.0'
 
+# GEM
+gem 'geocoder'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'

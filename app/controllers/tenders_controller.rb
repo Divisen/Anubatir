@@ -6,6 +6,10 @@ class TendersController < ApplicationController
   end
 
   def show
+    @marker = [{
+      lat: @tender.latitude,
+      lng: @tender.longitude
+    }]
   end
 
   def new

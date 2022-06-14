@@ -1,7 +1,116 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
-  <div class="container">
-    <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
-    <p>Change your life and learn to code at one of our campuses around the world.</p>
-    <a class="btn btn-flat" href="#">Apply now</a>
+<%# Banner %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.ytimg.com/vi/hcsQGR4Z2L0/maxresdefault.jpg);">
+  <div class="vcenter">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
+          <div class="banner-content">
+            <h1>Ensam nou construire to vision</h1>
+            <p>
+              "Whatever the level of support you require, we are sure that we will"
+              <br>
+              "have a package that meets your needs."
+            </p>
+            <a class="btn btn-flat" href="#">Apply now</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
+
+<%# Value section/ What we bring to the table section %>
+<div class="value-sec">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-6">
+        <div class="header">
+          <h2 class="heading2"> Kickstart your project here</h2>
+        </div>
+        <%# img column of section %>
+        <div class="img-col">
+          <%= image_tag "https://media.istockphoto.com/photos/happy-multiethnic-family-with-child-holding-cardboard-roof-picture-id1270066435?k=20&m=1270066435&s=612x612&w=0&h=elkT4SmQOvbzp15seakdsJUlxFzztPOeFo_PWbvuXdc=" %>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-6">
+        <ul class="list-unstyled choose-list">
+          <li class="row">
+            <span class="col-3">
+              <%= image_tag "iconpeople.svg", :class=>"p-2", :style =>"height: 6.5rem;" %>
+            </span>
+            <div class="txt-holder col">
+              <h3 class="heading1"> A community of 2,000+ experts</h3>
+              <h5>
+                Whether it’s for renovating a home, interior
+                /exterior design or building something from scratch, you'll whoever
+                you need in our community profiles
+              </h5>
+            </div>
+          </li>
+          <li class="row">
+            <span class="col-3">
+              <%= image_tag "time.svg", :class=>"p-2", :style =>"height: 6.5rem;" %>
+            </span>
+            <div class="txt-holder col">
+              <h3 class="heading1"> 6-month average duration of projects</h3>
+              <h5>
+                Thanks to our Lean Management approach, we ensure clients fast delivery of projects
+              </h5>
+            </div>
+          </li>
+          <li class="row">
+            <span class="col-3">
+              <%= image_tag "support.svg", :class=>"p-2", :style =>"height: 6.5rem;" %>
+            </span>
+            <div class="txt-holder col">
+              <h3 class="heading1"> We offer support 24/7</h3>
+              <h5>
+                We have a dedicated team who is ready to address your concerns, any time of the day
+              </h5>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%# Our services section %>
+
+<div class="container">
+  <h2 style="text-align:center;"><strong>Our services</strong></h2>
+  <br>
+</div>
+
+<div class="d-flex container" style="justify-content: space-evenly;">
+
+    <div class="col-2">
+      <div style="width: 18rem; height: 18rem;">
+        <%= image_tag "construction.svg", :class=>"p-2", :style =>"height: 6.5rem; margin-left: auto; margin-right: auto;" %>
+        <div class="card-body card-body-home">
+          <h5 class="card-title"><strong>Construction build</strong></h5>
+          <p class="card-text">Discover all the best land activities.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-2">
+      <div style="width: 18rem; height: 18rem;">
+        <%= image_tag "building.svg", :class=>"p-2", :style =>"height: 6.5rem;" %>
+        <div class="card-body card-body-home">
+          <h5 class="card-title"><strong>House renovation</strong></h5>
+          <p class="card-text">Discover all the best land activities.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-2">
+      <div style="width: 20rem; height: 20rem;">
+        <%= image_tag "design.svg", :class=>"p-2", :style =>"height: 6.5rem; margin-left: auto; margin-right: auto;" %>
+        <div class="card-body card-body-home">
+          <h5 class="card-title"><strong>Exterior & Interior design</strong></h5>
+          <p class="card-text">Discover all the best land activities.</p>
+        </div>
+      </div>
+    </div>
 </div>

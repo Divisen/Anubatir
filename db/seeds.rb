@@ -1,7 +1,29 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+require 'json'
+
+# json files
+file_user = "db/users.json"
+users_serialized = File.read(file_user)
+users = JSON.parse(users_serialized)
+
+# Clearing database
+puts "clearing database"
+Contract.destroy_all
+Bid.destroy_all
+Tender.destroy_all
+User.destroy_all
+
+# Creating database using faker and json files
+# (REFACTORED) This code allows us to just insert new entries in the json files without bothering with changing the number of the times the loop needs to repeat itself
+puts "creating users"
+countdown = users["entries"].count
+i = 0
+countdown.times do
+  user1 = User.create(first_name:Faker::Name.first_name, last_name:Faker::Name.last_name, username:Faker::Internet.username, email: "#{users["entries"][i]["email"]}", password: "#{users["entries"][i]["password"]}")
+  avatar = users["entries"][i]["avatar"]
+  file = URI.open("#{avatar}")
+  user1.avatar.attach(io: file, filename: "avatar.jpg#{i}", content_type: 'image/jpg')
+  i += 1
+end
+
+puts "users created"

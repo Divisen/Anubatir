@@ -40,8 +40,11 @@ gem 'pundit'
 # CLOUDINARY
 gem 'cloudinary', '~> 1.16.0'
 
-# GEM
+# GEOCODER
 gem 'geocoder'
+
+#FAKER
+gem 'faker'
 
 group :development, :test do
   gem 'pry-byebug'

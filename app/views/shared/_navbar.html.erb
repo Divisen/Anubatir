@@ -10,25 +10,33 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
-        <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link" %>
+            <%= link_to "Home", "/", class: "nav-link" %>
           </li>
+          <li class="nav-item active">
+            <%= link_to "Services", "/services", class: "nav-link" %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to "Projects", "/projects", class: "nav-link" %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to "Contact", "/contact", class: "nav-link" %>
+          </li>
+        <% if user_signed_in? %>
           <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link" %>
+            <%= link_to "Notifications", "#", class: "nav-link" %>
           </li>
-          <li class="nav-item dropdown">
+           <li class="nav-item dropdown">
             <% if current_user.avatar.key %>
               <%= cl_image_tag current_user.avatar.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <% else %>
               <%= image_tag "https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <% end %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+              <%= link_to "About me", "#", class: "dropdown-item fas fa-solid fa-user-alt" %>
+              <%= link_to "Settings", "#", class: "dropdown-item fas fa-cog" %>
+              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item fas fa-sign-out-alt" %>
             </div>
-          </li>
         <% else %>
           <li class="nav-item">
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>

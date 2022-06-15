@@ -1,0 +1,91 @@
+.section-first {
+  padding: 90px 0 100px 0;
+}
+
+.section-bottom-border {
+  border-bottom: 1px solid #efefef;
+}
+
+.section-top-border {
+  border-top: 1px solid #efefef;
+}
+
+.padding-bottom-40 {
+  padding-bottom: 40px !important;
+}
+
+.section-title {
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 18px;
+}
+
+.testim-inner {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center;
+  padding: 0 25px 25px 25px;
+  border: 1px solid #e5efff;
+  background-color: #fefefe;
+  border-radius: 7px 7px;
+  transition: all 1s;
+  height: 19rem;
+
+  &:hover {
+    border: 1px solid #1089d4;
+    transition: 0.8s ease;
+  }
+}
+
+.testim-inner:hover img {
+  border: 1px solid #1089d4;
+}
+
+.testim-inner img {
+  position: relative;
+  display: inline-block;
+  margin-top: -55px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50% 50%;
+  padding: 5px 5px;
+  background-color: #fff;
+}
+
+.testim-inner p {
+  font-size: 17px;
+  line-height: 28px;
+  font-style: italic;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-weight: 400;
+  color: #7c8595;
+}
+
+.testim-inner h6 {
+  margin-bottom: 5px;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #1089d4;
+}
+
+.img1-hover-zoom {
+  transition: transform 0.4s ease;
+  /* [1.1] Set it as per your need */
+  /* [1.2] Hide the overflowing of child elements */
+}
+
+/* [2] Transition property for smooth transformation of images */
+.img1-hover-zoom img {
+  transition: transform 0.8s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.img1-hover-zoom:hover img {
+  transform: scale(1.04);
+}

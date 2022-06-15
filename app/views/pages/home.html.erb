@@ -116,3 +116,40 @@
       </div>
     </div>
 </div>
+
+<%# Our Testimonials section %>
+  <%# Begin testimonials section %>
+  <section class="section-first section-top-border section-bottom-border">
+    <%# begin container %>
+    <div class="container">
+      <%# begin row %>
+      <div class="row">
+        <%# begin col-md-12 %>
+        <div class="col-md-12 text-center padding-bottom-40">
+          <h2 class="section-title">Clients Testimonials</h2>
+          <p class="section-subtitle">Our Clients are saying</p>
+        </div>
+        <%# end of col-md-12 %>
+        <%# begin col-md-4 %>
+        <% @testimonials = Testimonial.where("rating>3") %>
+        <% @testimonials.first(3) do |testimonial| %>
+        <div class="col-md-4">
+          <%# begin testim-inner %>
+          <div class="testim-inner first">
+            <%= cl_image_tag testitominal.user.avatar.key%>
+            <p> <%= testimonial.content  %> </p>
+            <h6> <%= testimonial.user.first_name %>  <%= testimonial.user.last_name %></h6>
+            <div class="testim-rating">
+              <p><%= testimonial.rating  %></p>
+            </div>
+          </div>
+          <%# end testim inner %>
+        </div>
+        <%# end col-md-4 %>
+        <% end %>
+      </div>
+      <%# end row %>
+    </div>
+    <%# end container %>
+  </section>
+  <%# end testimonials section %>

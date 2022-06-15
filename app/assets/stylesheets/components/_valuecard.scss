@@ -27,12 +27,18 @@
   line-height: 30px;
 }
 
-.heading2 {
-  font-size: 40px;
-  line-height: 42px;
-  font-weight: 600;
-}
+// .heading2 {
+//   font-size: 40px;
+//   line-height: 42px;
+//   font-weight: 600;
+// }
 
 .list-unstyled {
   list-style: none;
+}
+
+.flexvertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }

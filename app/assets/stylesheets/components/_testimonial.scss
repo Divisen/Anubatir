@@ -9,3 +9,27 @@
 .section-top-border {
   border-top: 1px solid #efefef;
 }
+
+.padding-bottom-40 {
+  padding-bottom: 40px !important;
+}
+
+.section-title {
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 18px;
+}
+
+.testim-inner {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center;
+  padding: 0 25px 25px 25px;
+  border: 1px solid #e5efff;
+  background-color: #fefefe;
+  border-radius: 7px 7px;
+  transition: all 1s;
+}

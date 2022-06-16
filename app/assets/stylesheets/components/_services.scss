@@ -1,0 +1,51 @@
+h2.section-title {
+  margin-bottom: 10px;
+  font-size: 36px;
+}
+
+p.section-subtitle {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #7c8595;
+  margin-bottom: 15px;
+}
+
+.our-services {
+  position: relative;
+  margin-top: 45px;
+  text-align: center;
+  transition: all 1s;
+
+  img {
+    margin-bottom: 20px;
+    border-radius: 8px 8px;
+    transition: all 1s;
+    height: 277px;
+  }
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.our-services h3 {
+  margin-bottom: 5px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #1089d4;
+}
+
+.our-services p {
+  padding: 0 10px;
+  margin-bottom: 25px;
+  font-size: 17px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #7c8595;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}

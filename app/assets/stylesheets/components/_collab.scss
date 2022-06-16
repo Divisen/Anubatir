@@ -1,0 +1,36 @@
+
+#collaborators {
+  overflow: hidden;
+}
+
+.heading-collab {
+  margin-bottom: 50px;
+  h2 {
+    margin-bottom: 10px;
+    font-size: 36px;
+}
+  }
+
+
+.heading-collab-bg {
+  margin-bottom: 20px;
+
+  h2 {
+    z-index: 3;
+    position: relative;
+  }
+}
+
+.brand img {
+  opacity: 0.7;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.img-responsive {
+  width: 150px;
+  height: 90px;
+}

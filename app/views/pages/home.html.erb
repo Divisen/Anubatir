@@ -149,39 +149,108 @@
 <%# end section %>
 
 <%# Our Testimonials section %>
-    <section class="section-white section-top-border" id="testimonials">
-      <%# begin container %>
-      <div class="container">
-        <%# begin row %>
-        <div class="row">
-          <%# begin col-md-12 %>
-          <div class="col-md-12 text-center padding-bottom-40">
-            <h2 class="section-title">Clients Testimonials</h2>
-            <p class="section-subtitle">Our Clients are saying</p>
-          </div>
-          <%# end of col-md-12 %>
-          <%# begin col-md-4 %>
-          <% @testimonials = Testimonial.where("rating>3") %>
-          <% @testimonials.last(3).each do |testimonial| %>
-            <div class="col-md-4">
-              <%# begin testim-inner %>
-              <div class="testim-inner first img1-hover-zoom">
-                <%= cl_image_tag testimonial.user.avatar.key, class:"testim-img"%>
-                <p> <%= testimonial.content  %> </p>
-                <h6> <%= testimonial.user.first_name %>  <%= testimonial.user.last_name %></h6>
-                <div class="testim-rating">
-                  <p><%= '⭐' * testimonial.rating  %></p>
-                </div>
-              </div>
-              <%# end testim inner %>
-            </div>
-            <%# end col-md-4 %>
-          <% end %>
-        </div>
-        <%# end row %>
+<section class="section-white section-top-border" id="testimonials">
+  <%# begin container %>
+  <div class="container">
+    <%# begin row %>
+    <div class="row">
+      <%# begin col-md-12 %>
+      <div class="col-md-12 text-center padding-bottom-40">
+        <h2 class="section-title">Clients Testimonials</h2>
+        <p class="section-subtitle">Our Clients are saying</p>
       </div>
-      <%# end container %>
-    </section>
+      <%# end of col-md-12 %>
+      <%# begin col-md-4 %>
+      <% @testimonials = Testimonial.where("rating>3") %>
+      <% @testimonials.last(3).each do |testimonial| %>
+        <div class="col-md-4">
+          <%# begin testim-inner %>
+          <div class="testim-inner first img1-hover-zoom">
+            <%= cl_image_tag testimonial.user.avatar.key, class:"testim-img"%>
+            <p> <%= testimonial.content  %> </p>
+            <h6> <%= testimonial.user.first_name %>  <%= testimonial.user.last_name %></h6>
+            <div class="testim-rating">
+              <p><%= '⭐' * testimonial.rating  %></p>
+            </div>
+          </div>
+          <%# end testim inner %>
+        </div>
+        <%# end col-md-4 %>
+      <% end %>
+    </div>
+    <%# end row %>
+  </div>
+  <%# end container %>
+</section>
+
+<%# Collaborators %>
+<section id="collaborators" class="section-white section-bottom-border section-top-border">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="heading-collab heading-collab-2 text-center">
+          <div class="heading-collab-bg">
+            <h2>
+              Our Trusted Partners
+            </h2>
+          </div>
+        </div>
+        <%# .heading end %>
+      </div>
+      <%# .col-md-12 end %>
+    </div>
+    <%# .row end %>
+    <div class="row">
+      <%# Client Item %>
+      <div class="col-xs-12 col-sm-4 col-md-2">
+        <div class="brand">
+          <%= image_tag "collab1.png", class:"img-responsive center-block"%>
+        </div>
+      </div>
+      <%# .col-md-2 end %>
+      <%# Client Item %>
+      <div class="col-xs-12 col-sm-4 col-md-2">
+        <div class="brand">
+          <%= image_tag "collab2.png", class:"img-responsive center-block"%>
+        </div>
+      </div>
+      <%# .col-md-2 end %>
+      <%# Client Item %>
+      <div class="col-xs-12 col-sm-4 col-md-2">
+        <div class="brand">
+          <%= image_tag "collab3.png", class:"img-responsive center-block"%>
+        </div>
+      </div>
+      <%# .col-md-2 end %>
+      <%# Client Item %>
+      <div class="col-xs-12 col-sm-4 col-md-2">
+        <div class="brand">
+          <%= image_tag "collab4.png", class:"img-responsive center-block"%>
+        </div>
+      </div>
+      <%# .col-md-2 end %>
+      <%# Client Item %>
+      <div class="col-xs-12 col-sm-4 col-md-2">
+        <div class="brand">
+          <%= image_tag "collab5.png", class:"img-responsive center-block"%>
+        </div>
+      </div>
+      <%# .col-md-2 end %>
+      <%# Client Item %>
+      <div class="col-xs-12 col-sm-4 col-md-2">
+        <div class="brand">
+          <%= image_tag "collab6.png", class:"img-responsive center-block"%>
+        </div>
+      </div>
+      <%# .col-md-2 end %>
+    </div>
+    <%# .row End %>
+  </div>
+  <%# .container END %>
+</section>
+<%# collaborators end %>
+
+
 
 <%# Past Services section %>
 <%#

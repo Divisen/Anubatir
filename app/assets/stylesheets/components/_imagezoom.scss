@@ -1,0 +1,16 @@
+
+.img1-hover-zoom {
+  transition: transform 0.4s ease;
+  /* [1.1] Set it as per your need */
+  /* [1.2] Hide the overflowing of child elements */
+}
+
+/* [2] Transition property for smooth transformation of images */
+.img1-hover-zoom img {
+  transition: transform 0.8s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.img1-hover-zoom:hover img {
+  transform: scale(1.04);
+}

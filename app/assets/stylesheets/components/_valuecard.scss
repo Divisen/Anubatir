@@ -50,3 +50,10 @@
 .spacingval {
   margin-top: 15px;
 }
+
+@media only screen and (min-width: 1400px) {
+  .col-custom-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}

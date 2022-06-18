@@ -9,19 +9,20 @@
     margin: 0;
     color: white;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    font-size: 70px;
+    font-size: 74px;
     line-height: 80px;
-    font-weight: 400;
+    font-weight: bold;
     margin-bottom: 27px;
   }
 
   p {
-    font-size: 20px;
-    font-weight: 400;
-    color: white;
+    font-size: 28px;
+    font-weight: light;
+    color: rgb(227, 225, 225);
     line-height: 28px;
-    opacity: .7;
+    opacity: .8;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    margin-bottom: 74px;
   }
 
 }

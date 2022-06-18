@@ -7,5 +7,53 @@
     <p>Anubatir is a privately owned, internationally focussed engineering enterprise with world-class capabilities spanning the entire client value chain. We operate an integrated business model comprising the full range of engineering, construction and asset management services delivering single-source solutions for some of the world's most prestigious public and private organisations.</p>
 
   </div>
+<div class="container contact">
+  <h1><strong>CONTACT US</strong></h1>
+  <p>Please get in touch if you have any questions about Billing, or Technical Support</p>
 
+
+    <div class="container_parent">
+      <div class="container-mid">
+        <div class="container_child class-img">
+          <%= image_tag "expert.jpg"%>
+          <div class="element-container1">
+          <h2>FEEL FREE TO CONTACT US !!</h2>
+          <p>Qui velit sunt aut nihil dignissimos sed doloremque itaque.
+          Sed voluptatem delectus aut error dicta ut debitis velit eos minima doloribus id quidem dolores sed fuga dolore.
+          Ea laborum rerum id enim labore et earum harum ab galisum temporibus nam labore dignissimos ut veritatis molestiae quo enim distinctio.
+          </p>
+        </div>
+      </div>
+      </div>
+
+      <div class="container_child">
+        <div class="element-container2">
+         <h2>CONTACT US !!</h2>
+         <p>Qui velit sunt aut nihil dignissimos sed doloremque itaque.
+         Sed voluptatem delectus aut error dicta ut debitis velit eos minima doloribus id quidem dolores sed fuga dolore.
+         Ea laborum rerum id enim labore et earum harum ab galisum temporibus nam labore dignissimos ut veritatis molestiae quo enim distinctio.
+         </p>
+         <div class="element-container3">
+          <form action="/contact_page">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" size="50" value=""><br>
+            <label for="fname">Last name:</label><br>
+            <input type="text" id="fname" name="fname" size="50" value=""><br>
+            <label for="lname">Your address email:</label><br>
+            <input type="text" id="lname" name="lname" size="50" value=""><br><br>
+            <textarea name="comments" id="comments" rows="5" cols="50" >Hey... say something!</textarea><br><br>
+            <input type="button" class="btn btn-info" value="Submit Message">
+            </form>
+          </div>
+        </div>
+    </div>
+
+    <div class="map">
+      <div style="width:100%; height:600px;"
+        data-controller = "mapbox"
+        data-mapbox-markers-value = "<%= @marker.to_json %>"
+        data-mapbox-api-key-value = "<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,9 +1,52 @@
-section.half-image-cont-section.dark-mem {
-  background: #2d2d2d;
+.banner-services {
+  height:60vh;
+}
+
+.banner-services-page {
+  height:50vh;
+  object-fit: cover;
 }
 
 .boxed {
   margin:0 40px ;
+}
+
+.title-services {
+  text-align: center;
+  margin-bottom: 70px;
+
+  h1 {
+    color: #222;
+    font-size: 36px;
+    font-weight: 300;
+    margin: 0 0 25px;
+    letter-spacing: -0.5px;
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-size: 14px;
+    font-style: italic;
+    line-height: 22px;
+    margin: 0;
+  }
+}
+
+.title-services h1:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  margin-left: -15px;
+  bottom: 0px;
+  width: 30px;
+  height: 3px;
+  background: #81cfe0;
+}
+
+section.half-image-cont-section.dark-mem {
+  background: #2d2d2d;
 }
 
 .half-image-cont-section {
@@ -17,8 +60,9 @@ section.half-image-cont-section .image-holder {
   width: 50%;
 
   img {
+    object-fit: cover;
+    height: 640px;
     width: 100%;
-    height: auto;
     vertical-align: middle;
     border: 0;
   }

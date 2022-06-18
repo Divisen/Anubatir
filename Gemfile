@@ -46,6 +46,9 @@ gem 'geocoder'
 #FAKER
 gem 'faker'
 
+#Receipts
+gem 'receipts'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'

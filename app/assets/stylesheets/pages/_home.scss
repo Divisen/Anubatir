@@ -1,1 +1,177 @@
 // Specific CSS for your home-page
+
+//value section
+.value-sec {
+  overflow: hidden;
+  padding: 49px 0 54px;
+  margin-left: -114px;
+  img {
+    vertical-align: middle;
+    object-fit: cover;
+  }
+
+  .header {
+    padding: 0 0 0 20px;
+    margin: 0 0 48px;
+  }
+
+  .heading1 {
+    margin: 0 0 20px;
+  }
+
+  .choose-list {
+    margin: 0;
+    overflow: hidden;
+    padding: 0 0 0 18px;
+  }
+}
+
+.header {
+  line-height: 30px;
+}
+
+.heading1 {
+  font-size: 40px;
+  line-height: 42px;
+  font-weight: 600;
+}
+
+.list-unstyled {
+  list-style: none;
+}
+
+.flexvertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.heading2 {
+  margin: 0 0 20px;
+}
+
+.spacingval {
+  margin-top: 15px;
+}
+
+@media only screen and (min-width: 1400px) {
+  .col-custom-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+
+
+// testimonials section
+.section-first {
+  padding: 90px 0 100px 0;
+}
+
+.section-bottom-border {
+  border-bottom: 1px solid #efefef;
+}
+
+.section-top-border {
+  border-top: 1px solid #efefef;
+}
+
+.padding-bottom-40 {
+  padding-bottom: 40px !important;
+}
+
+.section-title {
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 18px;
+}
+
+.testim-inner {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center;
+  padding: 0 25px 25px 25px;
+  border: 1px solid #e5efff;
+  background-color: #fefefe;
+  border-radius: 7px 7px;
+  transition: all 1s;
+  height: 19rem;
+
+  &:hover {
+    border: 1px solid #1089d4;
+    transition: 0.8s ease;
+  }
+}
+
+.testim-inner:hover img {
+  border: 1px solid #1089d4;
+}
+
+.testim-inner img {
+  position: relative;
+  display: inline-block;
+  margin-top: -55px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50% 50%;
+  padding: 5px 5px;
+  background-color: #fff;
+}
+
+.testim-inner p {
+  font-size: 17px;
+  line-height: 28px;
+  font-style: italic;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-weight: 400;
+  color: #7c8595;
+}
+
+.testim-inner h6 {
+  margin-bottom: 5px;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #1089d4;
+}
+
+//Collaborators
+#collaborators {
+  overflow: hidden;
+}
+
+.heading-collab {
+  margin-bottom: 50px;
+  h2 {
+    margin-bottom: 10px;
+    font-size: 36px;
+}
+  }
+
+
+.heading-collab-bg {
+  margin-bottom: 20px;
+
+  h2 {
+    z-index: 3;
+    position: relative;
+  }
+}
+
+.brand img {
+  opacity: 0.7;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.img-responsive {
+  width: 150px;
+  height: 90px;
+}

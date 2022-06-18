@@ -1,5 +1,82 @@
-<br>
-<br>
-<br>
-<br>
-<h1>Services page</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(http://7oroof.com/demos/yellowhats/assets/images/page-title/2.jpg); height:60vh;">
+  <div class="vcenter">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
+          <div class="banner-content">
+            <h1>Our services</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="section-white" id="services">
+  <%# begin container %>
+  <div class="container">
+    <div class="row">
+      <%# begin col-md-12 %>
+      <div class="col-md-12 text-center">
+        <p class="section-subtitle">Quality Construction Solutions For Individuals!</p>
+        <h2 class="section-title">Our Services</h2>
+      </div>
+      <%# end of col-md-12 %>
+    </div>
+    <%# end eow %>
+  </div>
+  <%# end container %>
+  <%# begin container %>
+  <div class="container">
+    <%# begin row %>
+    <div class="row">
+      <%# begin col-md-4 %>
+      <div class="col-md-4">
+        <%= link_to "/construction" do%>
+          <div class="our-services img1-hover-zoom">
+            <img src="https://images.unsplash.com/photo-1639953803381-e9c3f3a38253?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" class="width-100">
+            <h3>
+              Construction build
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere asperiores nam illo ad labore veniam culpa molestiae minima nisi odit expedita consectetur iusto quas, porro dolores, quos magnam. Possimus, quae.
+            </p>
+          </div>
+        <% end %>
+      </div>
+      <%# end col-md-4 %>
+      <%# begin col-md-4 %>
+      <div class="col-md-4">
+        <%= link_to services_path do%>
+          <div class="our-services img1-hover-zoom">
+            <img src="https://images.unsplash.com/photo-1482731215275-a1f151646268?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="" class="width-100">
+            <h3>
+              House renovation
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere asperiores nam illo ad labore veniam culpa molestiae minima nisi odit expedita consectetur iusto quas, porro dolores, quos magnam. Possimus, quae.
+            </p>
+          </div>
+        <% end %>
+      </div>
+      <%# end col-md-4 %>
+       <%# begin col-md-4 %>
+      <div class="col-md-4">
+        <%= link_to services_path do%>
+          <div class="our-services img1-hover-zoom">
+            <img src="https://images.unsplash.com/photo-1633109741715-59b57495bbdc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80" alt="" class="width-100">
+            <h3>
+              Exterior and interior design
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere asperiores nam illo ad labore veniam culpa molestiae minima nisi odit expedita consectetur iusto quas, porro dolores, quos magnam. Possimus, quae.
+            </p>
+          </div>
+        <% end %>
+      </div>
+      <%# end col-md-4 %>
+    </div>
+    <%# end row %>
+  </div>
+  <%# end container %>
+</section>

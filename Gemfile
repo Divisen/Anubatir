@@ -49,6 +49,9 @@ gem 'faker'
 #Receipts
 gem 'receipts'
 
+# Administration
+gem 'rails_admin', '~> 2.0'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'

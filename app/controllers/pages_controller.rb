@@ -13,4 +13,10 @@ class PagesController < ApplicationController
 
   def construction
   end
+
+  def renovation
+  end
+
+  def design
+  end
 end

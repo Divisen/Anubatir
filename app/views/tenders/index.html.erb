@@ -4,3 +4,8 @@
 <br>
 <h1>Hello world!</h1>
 <%= link_to "Post a tender", new_tender_path %>
+<% @tenders.each do |tender| %>
+  <ul>
+    <li><%= link_to "#{tender.estimated_start_date}", tender_path(tender) %></li>
+  </ul>
+<% end %>

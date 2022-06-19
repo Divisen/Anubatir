@@ -1,0 +1,9 @@
+<br>
+<br>
+<br>
+<br>
+<% @bids.each do |bid| %>
+  <ul>
+    <li> <%= link_to "#{bid.quote}", tender_bid_path(bid, @tender) %></li>
+  </ul>
+<% end %>

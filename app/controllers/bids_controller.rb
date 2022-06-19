@@ -1,9 +1,9 @@
 class BidsController < ApplicationController
   before_action :set_bid, only: [:show, :edit, :update, :destroy]
-  before_action :set_tender, only: [:new, :create, :update]
+  before_action :set_tender, only: [:new, :create, :update, :index]
 
   def index
-    @bids = Bid.all
+    @bids = Bid.where tender_id: @tender.id
   end
 
   def show

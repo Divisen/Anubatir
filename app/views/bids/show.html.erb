@@ -4,3 +4,4 @@
 <br>
 <br>
 <%= @bid.quote %>
+<%= link_to "Accept Bid", tender_bid_path(@bid.tender, @bid, format: :pdf) %>

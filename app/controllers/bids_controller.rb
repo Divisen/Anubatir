@@ -2,11 +2,48 @@ class BidsController < ApplicationController
   before_action :set_bid, only: [:show, :edit, :update, :destroy]
   before_action :set_tender, only: [:new, :create, :update, :index]
 
+  def receipt
+    Receipts::Statement.new(
+      details: [
+        ["Receipt Number", "123"],
+        ["Date paid", Date.today],
+        ["Payment method", "Internet Bank Transfer"]
+      ],
+      company: {
+        name: "Anubatir",
+        address: "Sir William Newton\nPort-Louis, Mauritius",
+        email: "support@example.com",
+        logo: Rails.root.join("app/assets/images/biglogo.png")
+      },
+      recipient: [
+        "Customer",
+        "Their Address",
+        "City, State Zipcode",
+        nil,
+        "customer@example.org"
+      ],
+      line_items: [
+        ["<b>Item</b>", "<b>Unit Cost</b>", "<b>Quantity</b>", "<b>Amount</b>"],
+        ["Subscription", "$19.00", "1", "$19.00"],
+        [nil, nil, "Subtotal", "$19.00"],
+        [nil, nil, "Tax", "$1.12"],
+        [nil, nil, "Total", "$20.12"],
+        [nil, nil, "<b>Amount paid</b>", "$20.12"],
+        [nil, nil, "Refunded on #{Date.today}", "$5.00"]
+      ],
+      footer: "Thanks for your business. Please contact us if you have any questions.")
+  end
+
   def index
     @bids = Bid.where tender_id: @tender.id
   end
 
   def show
+    respond_to do |format|
+      format.html
+      format.json
+      format.pdf { send_data(receipt.render, filename: "#{@bid.created_at.strftime("%Y-%m-%d")}-anubatir-receipt.pdf", type: "application/pdf", disposition: :inline) }
+    end
   end
 
   def new

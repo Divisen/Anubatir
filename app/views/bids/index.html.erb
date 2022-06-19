@@ -4,6 +4,6 @@
 <br>
 <% @bids.each do |bid| %>
   <ul>
-    <li> <%= link_to "#{bid.quote}", tender_bid_path(bid, @tender) %></li>
+    <li> <%= link_to "Bid posted by: #{bid.user.first_name} #{bid.user.last_name}", tender_bid_path(@tender,bid) %></li>
   </ul>
 <% end %>

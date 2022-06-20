@@ -1,5 +1,35 @@
 <br>
 <br>
 <br>
-<br>
-<h1>Hello presign up page here!</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5">
+      <h1 class="text-center">Choose profile type</h1>
+      <%= link_to (new_user_registration_path(type:"1")) do%>
+        <div class="icon-container-signup">
+          <div class="containericonsignup">
+            <%= image_tag "user.png", :class=>"p-2 icon"%>
+          </div>
+          <div>
+            <p>As a client, Im looking for
+            builders to execute my project/s</p>
+          </div>
+        </div>
+      <% end %>
+      <%= link_to (new_user_registration_path(type:"2")) do%>
+        <div class="icon-container-signup">
+          <div class="containericonsignup">
+            <%= image_tag "userbuilder.png", :class=>"p-2 icon"%>
+          </div>
+          <div>
+            <p>As a builder, Im looking for
+            right project/s, with the right client/s</p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7">
+      <img src="https://cdn.dribbble.com/users/5124613/screenshots/18487023/media/cca9facc1d3909eed63188c1e35bd4cb.png" alt="" style="width:113%; object-fit:cover; height:100%;">
+    </div>
+  </div>
+</div>

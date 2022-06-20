@@ -1,0 +1,28 @@
+.icon-container-signup {
+  border: 1px solid black;
+  border-radius: 16px;
+  margin: 20px 0 30px;
+
+  p {
+    padding: 0 5rem;
+    font-style: italic;
+    color: #7c8595;
+  }
+}
+
+.containericonsignup {
+  img {
+    height: 7.6rem;
+    margin: 0 11.5rem;
+    -webkit-filter: grayscale(100%);
+    -webkit-transition: .5s ease-in-out;
+    -moz-filter: grayscale(100%);
+    -moz-transition: .5s ease-in-out;
+    -o-filter: grayscale(100%);
+    -o-transition: .5s ease-in-out;
+  }
+}
+
+.icon-container-signup:hover {
+  border: 1px solid rgb(182, 6, 6);
+}

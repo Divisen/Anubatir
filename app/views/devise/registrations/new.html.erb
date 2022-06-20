@@ -1,9 +1,9 @@
 <h2>Sign up</h2>
 
-<% if params[:type]=="builder"%>
+<% if params[:type]=="1"%>
+  <h1>Is client</h1>
+<% elsif params[:type]=="2" %>
   <h1>Is builder</h1>
-<% elsif params[:type]=="client"%>
-  <h1>Is cl</h1>
 <% end %>
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
@@ -29,9 +29,10 @@
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :is_builder,
-                as: :radio_buttons,
+                # as: :hidden,
+                collection: [true,false],
                 label: "Are you a builder?",
-                required: true,
+                selected: 'true',
                 autofocus: true%>
   </div>
 

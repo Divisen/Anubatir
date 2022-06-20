@@ -20,7 +20,7 @@
               <%= f.input :address,
                           required: true,
                           autofocus: true,
-                          input_html: { autocomplete: "new-lastname" }%>
+                          input_html: { autocomplete: "new-address" }%>
               <%= f.input :email,
                           required: true,
                           autofocus: true,
@@ -35,12 +35,10 @@
             <% elsif params[:type]=="2" %>
               <%= f.input :company_name,
                           required: true,
-                          autofocus: true,
-                          input_html: { autocomplete: "new-firstname" }%>
+                          autofocus: true %>
               <%= f.input :address,
                           required: true,
-                          autofocus: true,
-                          input_html: { autocomplete: "email" }%>
+                          autofocus: true %>
               <%= f.input :email,
                           required: true,
                           autofocus: true,
@@ -52,11 +50,9 @@
               <%= f.input :password_confirmation,
                           required: true,
                           input_html: { autocomplete: "new-password" } %>
-              <%= f.input :is_builder,
-                          as: :hidden,
-                          collection: [true,false],
-                          selected: 'true',
-                          autofocus: true%>
+              <%= f.hidden_field :is_builder,
+                          value: 'true',
+                          input_html: { checked: true } %>
             <% end %>
       <div class="form-actions">
         <%= f.button :submit, "Sign up", class:"btn btn-primary" %>

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'services', to: 'pages#services'
   get 'projects', to: 'pages#projects'
   get 'contact', to: 'pages#contact'
+  get 'presignup', to: 'pages#presignup'
   get 'construction', to: 'pages#construction'
   get 'renovation', to: 'pages#renovation'
   get 'design', to: 'pages#design'

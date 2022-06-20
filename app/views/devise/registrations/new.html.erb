@@ -1,36 +1,77 @@
-<h2>Sign up</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-
-
-    <%= f.input :first_name,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "new-firstname" }%>
-    <%= f.input :last_name,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "new-lastname" }%>
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :is_builder,
-                as: :radio_buttons,
-                label: "Are you a builder?",
-                required: true,
-                autofocus: true%>
+<br>
+<br>
+<br>
+<section style="background-color:#f3ede5bf; margin:0 10px">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-sm-4">
+        <h2>Sign up</h2>
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= f.error_notification %>
+            <% if params[:type]=="1"%>
+              <%= f.input :first_name,
+                          required: true,
+                          autofocus: true,
+                          input_html: { autocomplete: "new-firstname" }%>
+              <%= f.input :last_name,
+                          required: true,
+                          autofocus: true,
+                          input_html: { autocomplete: "new-lastname" }%>
+              <%= f.input :address,
+                          required: true,
+                          autofocus: true,
+                          input_html: { autocomplete: "new-lastname" }%>
+              <%= f.input :email,
+                          required: true,
+                          autofocus: true,
+                          input_html: { autocomplete: "email" }%>
+              <%= f.input :password,
+                          required: true,
+                          hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                          input_html: { autocomplete: "new-password" } %>
+              <%= f.input :password_confirmation,
+                          required: true,
+                          input_html: { autocomplete: "new-password" } %>
+            <% elsif params[:type]=="2" %>
+              <%= f.input :company_name,
+                          required: true,
+                          autofocus: true,
+                          input_html: { autocomplete: "new-firstname" }%>
+              <%= f.input :address,
+                          required: true,
+                          autofocus: true,
+                          input_html: { autocomplete: "email" }%>
+              <%= f.input :email,
+                          required: true,
+                          autofocus: true,
+                          input_html: { autocomplete: "email" }%>
+              <%= f.input :password,
+                          required: true,
+                          hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                          input_html: { autocomplete: "new-password" } %>
+              <%= f.input :password_confirmation,
+                          required: true,
+                          input_html: { autocomplete: "new-password" } %>
+              <%= f.input :is_builder,
+                          as: :hidden,
+                          collection: [true,false],
+                          selected: 'true',
+                          autofocus: true%>
+            <% end %>
+      <div class="form-actions">
+        <%= f.button :submit, "Sign up", class:"btn btn-primary" %>
+      </div>
+      </div>
+      <% if params[:type]=="1"%>
+        <div class="col-sm-8">
+          <img src="https://cdn.dribbble.com/users/329493/screenshots/11290845/media/cfb2e8ab14d80eeb60f107d5ace4e951.png?compress=1&resize=1000x750&vertical=top" alt="" style="width:110%; height:100%; padding-bottom:10px">
+        </div>
+      <% elsif params[:type]=="2" %>
+        <div class="col-sm-8">
+          <img src="https://cdn.dribbble.com/users/5124613/screenshots/18487023/media/cca9facc1d3909eed63188c1e35bd4cb.png" alt="" style="width:110%; height:100%; padding-bottom:10px">
+        </div>
+      <% end %>
+    <% end %>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
+</section>

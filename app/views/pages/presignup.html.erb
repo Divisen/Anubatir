@@ -1,0 +1,35 @@
+<br>
+<br>
+<br>
+<div class="container box-signup">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5">
+      <h1 class="text-center">Choose profile type</h1>
+      <%= link_to (new_user_registration_path(type:"1")) do%>
+        <div class="icon-container-signup">
+          <div class="containericonsignup">
+            <%= image_tag "user.png", :class=>"p-2 icon"%>
+          </div>
+          <div>
+            <p>As a client, Im looking for
+            builders to execute my project/s</p>
+          </div>
+        </div>
+      <% end %>
+      <%= link_to (new_user_registration_path(type:"2")) do%>
+        <div class="icon-container-signup">
+          <div class="containericonsignup">
+            <%= image_tag "userbuilder.png", :class=>"p-2 icon"%>
+          </div>
+          <div>
+            <p>As a builder, Im looking for
+            right project/s, with the right client/s</p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7 containerimagesignup">
+      <img src="https://cdn.dribbble.com/users/228922/screenshots/3293490/media/183c089ec9712fa9c310af72773f8842.png?compress=1&resize=800x600&vertical=top" alt="">
+    </div>
+  </div>
+</div>

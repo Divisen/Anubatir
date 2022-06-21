@@ -28,10 +28,28 @@ puts "creating users"
 countdown = users["entries"].count
 i = 0
 countdown.times do
-  user1 = User.create(first_name:Faker::Name.first_name, last_name:Faker::Name.last_name, username:Faker::Internet.username, email: "#{users["entries"][i]["email"]}", password: "#{users["entries"][i]["password"]}")
+  user1 = User.create(first_name:Faker::Name.first_name, last_name:Faker::Name.last_name, username:Faker::Internet.username, email: "#{users["entries"][i]["email"]}", password: "#{users["entries"][i]["password"]}", is_builder: "#{users["entries"][i]["is_builder"]}")
   avatar = users["entries"][i]["avatar"]
   file = URI.open("#{avatar}")
   user1.avatar.attach(io: file, filename: "avatar.jpg#{i}", content_type: 'image/jpg')
+
+  if user1.is_builder == false
+    budget = (1000000..9999999).to_a.sample
+    tender1 = Tender.create(title: "#{tenders["entries"][i]["title"]}", description: "#{tenders["entries"][i]["description"]}",estimated_budget: budget, location: "#{tenders["entries"][i]["location"]}", nature_of_works: "#{tenders["entries"][i]["nature_of_works"]}", user_id: "#{user1.id}")
+    k = 0
+    countdown3 = tenders["entries"][i]["image"].count
+    countdown3.times do
+      image = tenders["entries"][i]["image"][k]
+      file = URI.open("#{image}")
+      tender1.images.attach(io: file, filename: "tender.jpg#{k}", content_type: 'image/jpg')
+      k += 1
+    end
+  end
+
+  # if user1.is_builder == true
+  #   added_quote = (-4000..50000).to_a.sample
+  #   Bid.create(quote: "#{tender1.estimated_budget + added_quote}", tender_id: "#{tender1.id}", user_id: "#{user1.id}")
+  # end
 
   rating = (1..5).to_a.sample
   Testimonial.create(content: "#{testimonials["entries"][i]["content"]}", rating: rating, user_id: "#{user1.id}")
@@ -39,4 +57,6 @@ countdown.times do
 end
 
 puts "users created"
+puts "tenders created"
+puts "bids created"
 puts "testimonials added"

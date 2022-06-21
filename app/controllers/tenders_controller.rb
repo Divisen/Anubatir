@@ -2,7 +2,11 @@ class TendersController < ApplicationController
   before_action :set_tender, only: [:show, :edit, :update, :destroy]
 
   def index
+    if params[:query].present?
+      @tenders = Tender.global_search(params[:query])
+    else
     @tenders = Tender.all
+    end
   end
 
   def show

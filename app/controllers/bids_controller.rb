@@ -3,6 +3,7 @@ class BidsController < ApplicationController
   before_action :set_tender, only: [:new, :create, :update, :index]
 
   def receipt
+    @bid = Bid.find(params[:id])
     Receipts::Statement.new(
       details: [
         ["Receipt Number", "123"],
@@ -10,17 +11,17 @@ class BidsController < ApplicationController
         ["Payment method", "Internet Bank Transfer"]
       ],
       company: {
-        name: "Anubatir",
-        address: "Sir William Newton\nPort-Louis, Mauritius",
-        email: "support@example.com",
+        name: "#{@bid.user.company_name}",
+        address: "#{@bid.user.address}",
+        email: "#{@bid.user.email}",
         logo: Rails.root.join("app/assets/images/biglogo.png")
       },
       recipient: [
-        "Customer",
-        "Their Address",
+        "#{@bid.tender.user.first_name} #{@bid.tender.user.last_name}",
+        "#{@bid.tender.user.address}",
         "City, State Zipcode",
         nil,
-        "customer@example.org"
+        "#{@bid.tender.user.email}"
       ],
       line_items: [
         ["<b>Item</b>", "<b>Unit Cost</b>", "<b>Quantity</b>", "<b>Amount</b>"],

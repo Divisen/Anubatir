@@ -1,0 +1,76 @@
+{ "entries": [
+  {
+    "title": "UBC Okanagan – Office Modular One (OM1)",
+    "description": "Construction of a temporary modular building planned for the area east of the Transit Exchange. This building is needed to address the campus’s current space shortage and will provide temporary office space for university staff to enable campus moves and growth.",
+    "nature_of_works": "Construction build",
+    "location": "Gros Cailloux, Mauritius"
+  },
+  {
+    "title": "Bubble Lodge Ile aux Cerfs Island– HVAC Upgrades",
+    "description": "Renovations to four floors at the Bubble Lodge, at Ile aux Cerfs, to provide fresh air directly to each client's room by installing a new Heat Recovery Ventilator including controls that integrate into the existing Building Management System. The project will include new structural, mechanical and electrical upgrades as required for all new equipment.",
+    "nature_of_works": "Renovation",
+    "location": "Montagne Blanche, Mauritius"
+  },
+  {
+    "title": "Northern Lights Sculpture Tender",
+    "description": "The project consists of excavation and preparation of subsurface areas including perimeter drainage, construction of a cast-in-place concrete sculpture base, relocation and installation of the existing NLC sculpture to the entry location.",
+    "nature_of_works": "Interior & Exterior Design",
+    "location": "Curepipe, Mauritius"
+  },
+  {
+    "title": "Royal Jubilee House",
+    "description": "A Replacement of the Cart washer is proposed to be built at the Royal Jubilee Hospital Campus in Victoria with site preparation and equipment, civil work necessary for the selective demolition, modifications and new construction.",
+    "nature_of_works": "Construction build",
+    "location": "Camp Thorel, Mauritius"
+  },
+  {
+    "title": "Long Mountain Villa – Living Units 1-4 Midlife Interior Refit",
+    "description": "Renovations to Living Units 1, 2, 3 & 4 not limited to but including removal of furnishings and installation of new flooring, painting, mechanical and electrical.",
+    "nature_of_works": "Renovation",
+    "location": "Long Mountain, Mauritius"
+  },
+  {
+    "title": "Lions Gate Bungalow – FMO Relocation Project",
+    "description": "Renovations of existing spaces within Evergreen House to move FMO’s operations to facilitate the new power plant construction. These renovations include, but not limited to, installation of new and modification of the existing mechanical and electrical systems, civil works, structural supports, and interior finishes.",
+    "nature_of_works": "Renovation",
+    "location": "Grand Baie"
+  },
+  {
+    "title": "Royal Palm Villa",
+    "description": "We are inviting bids from Prequalified General Contractors with the intention of awarding a Contract for General Contracting services for the construction of a new villa at Palmar beach",
+    "nature_of_works": "Construction build",
+    "location": "Palmar, Mauritius"
+  },
+  {
+    "title": "Condo in Tamarin",
+    "description": "The project includes major renovations to convert two bedrooms into one (1) large leisure room with support spaces. The project will involve structural, mechanical and electrical upgrades.",
+    "nature_of_works": "Renovation",
+    "location": "Tamarin, Mauritius"
+  },
+  {
+    "title": "Sookdeo Bissoondoyal Memorial Museum",
+    "description": "The public galleries requires ventilation upgrade to meet the health and safety requirements",
+    "nature_of_works": "Renovation",
+    "location": "Rivière Des Anguilles, Mauritius"
+  },
+  {
+    "title": "Private villa with seaview",
+    "description": "The scope is a complete remodel of one or more (as budget allows) of the villa's bathing rooms",
+    "nature_of_works": "Interior and Exterior design",
+    "location": "Flic en Flac, Mauritius",
+    "estimated budget": ""
+  },
+  {
+    "title": "Construcion of Villahouse at Riambel",
+    "description": "The scope of work includes the following services, Design Development Phase Services, Construction Document Phase Services, Construction Phase Services, and Post Construction Phase Services.",
+    "nature_of_works": "Construction build",
+    "location": "Riambel, Mauritius"
+  },
+  {
+    "title": "Resort in Poste de Flacq with Terrace, Pool & Garden",
+    "description": "An electrical upgrade and replacement of the two existing generators and with two new larger generators housed in walk-in sound-attenuated enclosures complete with associated auxiliary equipment including switchgear, fuel tanks, and silencers.",
+    "nature_of_works": "Construction build",
+    "location": "Poste de Flacq, Mauritius"
+  }
+]
+}

@@ -69,7 +69,8 @@
     "avatar": "https://images.unsplash.com/photo-1628890920690-9e29d0019b9b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGF2YXRhcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
     "password": 123456,
     "email": "mail12@me.com",
-    "is_builder": true
+    "is_builder": true,
+    "admin": true
   }
 ]
 }

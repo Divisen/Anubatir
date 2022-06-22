@@ -4,4 +4,12 @@
 <br>
 <br>
 <%= @bid.quote %>
+<h3>Bill of Quantities</h3>
+<p>Name</p> &nbsp; <p>Quantity</p> &nbsp; <p>Unit</p> &nbsp; <p>Unit Rate</p> &nbsp; <p>Amount</p>
+<% total = 0 %>
+<% @bid.items.each do |item| %>
+  <p><%= item.name %></p> &nbsp; <p><%= item.quantity %></p> &nbsp; <p><%= item.unit %></p> &nbsp; <p>Rs <%= item.unit_rate %></p> &nbsp; <p>Rs <%= item.amount %></p>
+  <% total += item.amount %>
+<% end %>
+<p>Total Amount quoted:</p><% total %>
 <%= link_to "Accept Bid", tender_bid_path(@bid.tender, @bid, format: :pdf) %>

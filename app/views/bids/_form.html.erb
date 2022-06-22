@@ -10,7 +10,9 @@
 
         <h3>Add Items</h3>
         <%= f.simple_fields_for :items do |item| %>
-          <%= render 'item_fields', f: item %>
+          <div class="form-inline">
+            <%= render 'item_fields', f: item %>
+          </div>
         <% end %>
 
         <div class="links">

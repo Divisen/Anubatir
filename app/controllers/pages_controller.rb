@@ -19,4 +19,7 @@ class PagesController < ApplicationController
 
   def design
   end
+
+  def about
+  end
 end

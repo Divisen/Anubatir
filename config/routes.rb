@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'construction', to: 'pages#construction'
   get 'renovation', to: 'pages#renovation'
   get 'design', to: 'pages#design'
+  get 'about', to: 'pages#about'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :testimonials, only: [:new, :create]
   resources :tenders do

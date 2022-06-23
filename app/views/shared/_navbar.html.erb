@@ -24,6 +24,9 @@ data-action="scroll@window->navbar#updateNavbar">
           <li class="nav-item active">
             <%= link_to "Contact", "/contact", class: "nav-link" %>
           </li>
+          <li class="nav-item active">
+            <%= link_to "About us", "/about", class: "nav-link" %>
+          </li>
         <% if user_signed_in? %>
           <li class="nav-item">
             <%= link_to "Notifications", "#", class: "nav-link" %>

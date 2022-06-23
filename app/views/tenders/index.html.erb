@@ -12,13 +12,44 @@
           %>
           <%= submit_tag "Search", class: "btn btn-primary" %>
         <% end %>
-       <% @tenders.each do |tender| %>
-        <ul>
-          <li><%= link_to "#{tender.title}", tender_path(tender) %></li>
-        </ul>
-      <% end %>
-
-      <%= link_to "Post a tender", new_tender_path %>
     </div>
   </div>
 </div>
+
+<section class="portfolio-stand">
+  <div class="container">
+    <div class="row">
+    <% @tenders.each do |tender| %>
+      <div class="col-sm-6 col-md-6 col-lg-4">
+        <div class="portfolio-item">
+          <div class="portfolio-item__img">
+            <%= link_to tender_path(tender), class:"img1-hover-zoom popup-gallery-item" do%>
+              <%= cl_image_tag tender.images[0].key%>
+            <% end %>
+          </div>
+          <div class="portfolio-img__content">
+            <div class="portfolio-item__cat">
+              <a href="#">
+                Some words
+              </a>
+              <a href="#">More words</a>
+            </div>
+            <h4 class="portfolio-item__title">
+              <%= tender.title %>
+            </h4>
+            <p class="portfolio-item__desc">
+              <%= tender.description %>
+            </p>
+            <%= link_to tender_path(tender), class:"btn btn__loadMore" do%>
+              <i class="icon-arrow-right"></i>
+              <span>Explore More</span>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</section>
+
+      <%= link_to "Post a tender", new_tender_path %>

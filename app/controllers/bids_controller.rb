@@ -84,7 +84,7 @@ class BidsController < ApplicationController
   private
 
   def bid_params
-    params.require(:bid).permit(:quote, :approved, item_attributes:[:id, :name, :quantity, :unit, :bid_id, :unit_rate, :amount, :_destroy])
+    params.require(:bid).permit(:quote, :approved, items_attributes:[:id, :name, :quantity, :unit, :unit_rate, :amount, :_destroy])
   end
 
   def set_bid

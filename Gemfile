@@ -55,6 +55,12 @@ gem 'rails_admin', '~> 2.0'
 # Pg Search
 gem 'pg_search', '~> 2.3.0'
 
+# Cocoon
+gem 'cocoon'
+
+#JQUERY
+gem 'jquery-rails'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'

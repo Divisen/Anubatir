@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_21_012131) do
+ActiveRecord::Schema.define(version: 2022_06_22_185045) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,6 +65,18 @@ ActiveRecord::Schema.define(version: 2022_06_21_012131) do
     t.index ["bid_id"], name: "index_contracts_on_bid_id"
   end
 
+  create_table "items", force: :cascade do |t|
+    t.string "name"
+    t.integer "quantity"
+    t.string "unit"
+    t.integer "unit_rate"
+    t.integer "amount"
+    t.bigint "bid_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["bid_id"], name: "index_items_on_bid_id"
+  end
+
   create_table "tenders", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -103,7 +115,7 @@ ActiveRecord::Schema.define(version: 2022_06_21_012131) do
     t.string "first_name"
     t.string "last_name"
     t.string "username"
-    t.boolean "is_builder"
+    t.boolean "is_builder", default: false
     t.boolean "admin"
     t.string "company_name"
     t.string "address"
@@ -117,6 +129,7 @@ ActiveRecord::Schema.define(version: 2022_06_21_012131) do
   add_foreign_key "bids", "tenders"
   add_foreign_key "bids", "users"
   add_foreign_key "contracts", "bids"
+  add_foreign_key "items", "bids"
   add_foreign_key "tenders", "users"
   add_foreign_key "testimonials", "users"
 end

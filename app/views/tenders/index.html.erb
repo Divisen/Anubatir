@@ -16,8 +16,8 @@
   </div>
 </div>
 
-<section class="portfolio-stand">
-  <div class="container">
+<section class="portfolio-standard">
+  <div class="container containerindex">
     <div class="row">
     <% @tenders.each do |tender| %>
       <div class="col-sm-6 col-md-6 col-lg-4">
@@ -27,18 +27,15 @@
               <%= cl_image_tag tender.images[0].key%>
             <% end %>
           </div>
-          <div class="portfolio-img__content">
+          <div class="portfolio-item__content">
             <div class="portfolio-item__cat">
-              <a href="#">
-                Some words
-              </a>
-              <a href="#">More words</a>
+              <%= tender.nature_of_works %>
             </div>
             <h4 class="portfolio-item__title">
               <%= tender.title %>
             </h4>
             <p class="portfolio-item__desc">
-              <%= tender.description %>
+              Posted by <%= tender.user.username %>
             </p>
             <%= link_to tender_path(tender), class:"btn btn__loadMore" do%>
               <i class="icon-arrow-right"></i>

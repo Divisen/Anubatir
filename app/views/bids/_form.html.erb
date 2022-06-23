@@ -6,7 +6,6 @@
   <div class="row">
     <div class="col-12 col-sm-8 col-md-4">
       <%= simple_form_for [@tender, @bid] do |f| %>
-        <%= f.input :quote %>
 
         <h3>Add Items</h3>
         <%= f.simple_fields_for :items do |item| %>
@@ -16,7 +15,7 @@
         <% end %>
 
         <div class="links">
-          <%= link_to_add_association "Add Item", f, :items %>
+          <%= link_to_add_association "Add BOQ items", f, :items %>
         </div>
 
         <%= f.submit "Submit", class: "btn btn-primary" %>

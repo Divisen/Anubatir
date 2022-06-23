@@ -24,7 +24,6 @@ section {
 }
 
 a {
-  color: #ff4c01;
   transition: color .3s ease;
   text-decoration: none;
   background-color: transparent;
@@ -35,7 +34,7 @@ img {
   border-style: none;
 }
 
-.portfolio-item .portfolio-item__content {
+.portfolio-standard .portfolio-item .portfolio-item__content {
   padding: 36px 30px 37px 35px;
   background-color: #fff;
 }

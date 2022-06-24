@@ -1,15 +1,19 @@
 require 'faker'
 require 'json'
 
-# json files
+# JSON FILES
+
+# Users
 file_user = "db/users.json"
 users_serialized = File.read(file_user)
 users = JSON.parse(users_serialized)
 
+# Tenders
 file_tender = "db/tenders.json"
 tenders_serialized = File.read(file_tender)
 tenders = JSON.parse(tenders_serialized)
 
+# Testimonials
 filepath = "db/testimonials.json"
 testimonials_serialized = File.read(filepath)
 testimonials = JSON.parse(testimonials_serialized)

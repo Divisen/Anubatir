@@ -1,0 +1,48 @@
+.container-main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  }
+
+// #carousel-picture-tender {
+//   margin-top: 40px;
+//   margin-left: 20px;
+//   object-fit: fill;
+// }
+
+.info2 {
+  margin-top: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.project-detail-list{
+  margin-top: 10px;
+  list-style-type: none;
+}
+
+.link{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+
+.project-detail-list li {
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 0.6rem;
+  margin-top: 0.65rem;
+  overflow: hidden;
+}
+
+.project-detail-list li .right {
+  float: right;
+}
+
+.project-detail-list li .left {
+  float: left;
+  font-weight: bolder;
+  color: black;
+}

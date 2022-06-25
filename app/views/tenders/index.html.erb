@@ -35,7 +35,12 @@
               <%= tender.title %>
             </h4>
             <p class="portfolio-item__desc">
-              Posted by <%= tender.user.username %>
+
+            <% if user_signed_in? %>
+              <%= link_to user_path(tender.user) do%>
+                Posted by <%= tender.user.username %>
+                <% end %>
+            <% end %>
             </p>
             <%= link_to tender_path(tender), class:"btn btn__loadMore" do%>
               <i class="icon-arrow-right"></i>

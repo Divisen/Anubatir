@@ -1,26 +1,115 @@
-.footer {
-  background: #F4F4F4;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100px;
-  padding: 0px 50px;
-  color: rgba(0,0,0,0.3);
+footer {
+  background: #1F2128;
+  padding-top: 70px;
+  
+
+  img {
+    height: 50px;
+  }
 }
-.footer-links {
-  display: flex;
-  align-items: center;
+
+footer img.logo {
+  margin-bottom: 30px;
+  vertical-align: middle;
 }
-.footer-links a {
-  color: black;
-  opacity: 0.15;
-  text-decoration: none;
-  font-size: 24px;
-  padding: 0px 10px;
+
+footer .text {
+  font-weight: 400;
+  font-size: 14px;
+  color: #D8D8D8;
+  line-height: 30px;
+  letter-spacing: 0.88px;
 }
-.footer-links a:hover {
-  opacity: 1;
+
+footer .social {
+  overflow: hidden;
+  margin-top: 10px;
 }
-.footer .fa-heart {
-  color: #D23333;
+
+ul {
+  margin-bottom: 0px;
+}
+
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+footer .social li {
+  float: left;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+footer .social li a {
+  color: #fff;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+footer h5 {
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 0.69px;
+  line-height: 30px;
+  margin-bottom: 30px !important;
+}
+
+footer .footer-nav li a {
+  display: block;
+  overflow: hidden;
+}
+
+footer .footer-nav li a i {
+  float: left;
+  height: 32px;
+  line-height: 32px;
+  margin-right: 12px;
+  font-size: 14px;
+  color: #fff;
+}
+
+footer .footer-nav li a span {
+    float: left;
+    height: 32px;
+    line-height: 32px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #D8D8D8;
+    transition: all 0.3s ease 0s;
+}
+
+footer .footer-nav li a:hover span {
+  padding-left: 5px;
+}
+
+footer .address p {
+  display: block;
+  overflow: hidden;
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  line-height: 26px;
+  letter-spacing: 0.88px;
+  margin-bottom: 5px;
+
+  a {
+    color: #D8D8D8
+  }
+}
+
+footer .copyright {
+  text-align: center;
+  border-top: 1px solid #343641;
+  margin-top: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #D8D8D8;
+  letter-spacing: 0.88px;
 }

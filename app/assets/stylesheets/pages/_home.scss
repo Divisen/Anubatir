@@ -1,9 +1,19 @@
 // Specific CSS for your home-page
-
+.home-body {
+  background-image: url("https://images.unsplash.com/photo-1496307653780-42ee777d4833?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 500px;
+}
 //value section
 .value-sec {
   overflow: hidden;
   padding: 49px 0 54px;
+  margin-left: -114px;
+  padding: 50px 0px 50px 0px;
+  background-image: linear-gradient(90deg, #f0ecec 10%, #e8ecf1 90%);
   margin-left: -114px;
   img {
     vertical-align: middle;
@@ -26,6 +36,10 @@
   }
 }
 
+.containerval {
+  margin-left: 207px;
+}
+
 .header {
   line-height: 30px;
 }
@@ -34,6 +48,10 @@
   font-size: 40px;
   line-height: 42px;
   font-weight: 600;
+}
+
+.img-val {
+  border-radius: 16px ;
 }
 
 .list-unstyled {
@@ -63,16 +81,21 @@
 
 
 // testimonials section
+.section-testimonials {
+  background-color: #ededf1;;
+  margin-bottom: 83px;
+}
+
 .section-first {
   padding: 90px 0 100px 0;
 }
 
 .section-bottom-border {
-  border-bottom: 1px solid #efefef;
+  border-bottom: 1px solid #ededf1;
 }
 
 .section-top-border {
-  border-top: 1px solid #efefef;
+  border-top: 1px solid #ededf1;
 }
 
 .padding-bottom-40 {
@@ -94,7 +117,7 @@
   text-align: center;
   padding: 0 25px 25px 25px;
   border: 1px solid #e5efff;
-  background-color: #fefefe;
+  background-color: #ffffffbc;
   border-radius: 7px 7px;
   transition: all 1s;
   height: 19rem;
@@ -142,6 +165,9 @@
 //Collaborators
 #collaborators {
   overflow: hidden;
+  padding-bottom: 90px;
+  background-color: #ededf1;
+  margin-top: 113px;
 }
 
 .heading-collab {

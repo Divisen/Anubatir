@@ -1,5 +1,5 @@
 class BidsController < ApplicationController
-  before_action :set_bid, only: [:show, :edit, :update, :destroy]
+  before_action :set_bid, only: [:show, :edit, :update, :destroy, :activate]
   before_action :set_tender, only: [:new, :create, :update, :index]
 
   def receipt
@@ -66,6 +66,24 @@ class BidsController < ApplicationController
   def edit
   end
 
+  def activate
+    @bid.update(approved: true)
+  end
+
+  def reject
+    @tender = Tender.find(params[:tender_id])
+    @bids = Bid.where tender_id: @tender.id
+    rejects = @bids.reject do |rejected_bid|
+      rejected_bid.approved == true
+    end
+    rejects.each do |reject|
+      reject.update(rejected: true)
+    end
+
+    redirect_to tender_path(@tender)
+  end
+
+
   def update
     @bid.tender = @tender
     @bid.user = current_user
@@ -84,7 +102,7 @@ class BidsController < ApplicationController
   private
 
   def bid_params
-    params.require(:bid).permit(:quote, :approved, items_attributes:[:id, :name, :quantity, :unit, :unit_rate, :amount, :_destroy])
+    params.require(:bid).permit(:quote, :approved, :rejected, items_attributes:[:id, :name, :quantity, :unit, :unit_rate, :amount, :_destroy])
   end
 
   def set_bid

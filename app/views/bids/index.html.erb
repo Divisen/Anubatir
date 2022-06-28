@@ -4,6 +4,10 @@
 <br>
 <% @bids.each do |bid| %>
   <ul>
-    <li> </li>
-  </ul><%= link_to "Bid posted by: #{bid.user.company_name}", tender_bid_path(@tender,bid) %>
+    <% if bid.rejected %>
+      <li><%= link_to "Bid posted by: #{bid.user.company_name}", tender_bid_path(@tender,bid), class:"disabled" %> </li>
+    <% else %>
+      <li><%= link_to "Bid posted by: #{bid.user.company_name}", tender_bid_path(@tender,bid) %> </li>
+    <% end %>
+  </ul>
 <% end %>

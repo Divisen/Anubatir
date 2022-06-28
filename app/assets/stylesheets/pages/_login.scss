@@ -1,0 +1,233 @@
+.bg-img-fix {
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.full-blog-dark.style-1 .z-index2.skew-section {
+  float: right;
+}
+
+.login-form {
+  max-width: 400px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.p-a0 {
+  padding: 0;
+}
+
+.clearfix:before {
+  content: "";
+  display: table;
+}
+
+.loginHeight {
+  height: 763px;
+}
+
+.skew-section {
+  position: relative;
+  z-index: 2;
+}
+
+.bg-white-login {
+  background-color: #fff!important;
+}
+
+.login-form {
+  max-width: 400px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.logo-header img {
+  max-width: 70px;
+  width: auto;
+  height: auto;
+  vertical-align: middle;
+  border-style: none;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix:after, .clearfix:before {
+  content: "";
+  display: table;
+}
+
+.p-b50 {
+  padding-bottom: 50px;
+}
+
+.nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.tab-content>.active {
+  display: block;
+}
+
+.form-title h3 {
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 600;
+}
+
+.dez-separator-outer {
+  overflow: hidden;
+}
+
+.m-b5 {
+  margin-bottom: 5px;
+}
+
+.dez-separator.style-liner {
+  width: 20px;
+}
+
+.bg-primary {
+  background-color: #FDC716 !important;
+}
+
+.dez-separator[class*=style-]:before {
+  left: auto;
+  right: 30px;
+}
+
+.dez-separator[class*=style-]:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  width: 70px;
+  height: 1px;
+  background: #cecece;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.dez-form .form-group {
+  margin-bottom: 15px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.login-form.style-2 .form-control {
+  background: #fff;
+  border-left: 2px solid #707070;
+}
+
+.dez-form .form-control {
+  background: #dde3ec;
+  height: 44px;
+}
+
+.dez-form .form-group {
+  margin-bottom: 15px;
+}
+
+.login-form.style-2 .form-control {
+  background: #fff;
+  border-left: 2px solid #707070;
+}
+
+.dez-form .form-group {
+  margin-bottom: 15px;
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.input[type=checkbox], input[type=radio] {
+  opacity: 0;
+  margin-left: 1px!important;
+}
+
+.input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.input[type=checkbox]+label, input[type=radio]+label {
+  display: block;
+  padding-left: 20px!important;
+  position: relative;
+}
+
+.m-l5 {
+  margin-left: 5px;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bottom-footer {
+  position: fixed;
+  bottom: 0;
+  height: 35px;
+  background: rgba(0,0,0,.2);
+  width: 100%;
+  padding: 5px;
+  left: 0;
+  right: 0;
+  z-index: 4;
+}
+
+.text-white {
+  color: #fff!important;
+}
+
+.text-center {
+  text-align: center!important;
+}
+
+.skew-section.left-bottom:after {
+  left: -50px;
+  transform: skewX(-7deg);
+}
+
+.skew-section.left-bottom:after {
+  background: #fff;
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 100px;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+}
+
+#form {
+  float: right;
+}
+
+.sign_in {
+  height: 110px;
+}
+
+.site-button {
+  margin-bottom: 20px;
+}

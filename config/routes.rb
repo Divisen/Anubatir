@@ -15,6 +15,14 @@ Rails.application.routes.draw do
   resources :testimonials, only: [:new, :create]
   resources :tenders do
     resources :bids do
+      member do
+        get 'activate'
+        put 'activate'
+      end
+      collection do
+        get 'reject'
+        put 'reject'
+      end
       resources :contracs, only: [:index, :new, :create, :edit, :update ]
     end
   end

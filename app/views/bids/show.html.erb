@@ -29,5 +29,6 @@
   </table>
   <% @bid.save %>
   <p>Total Amount quoted: Rs <%= @bid.quote %> </p>
-  <%= link_to "Accept Bid", tender_bid_path(@bid.tender, @bid, format: :pdf) %>
+  <%= link_to "Accept Bid", activate_tender_bid_path(@bid.tender, @bid)%>
 </div>
+

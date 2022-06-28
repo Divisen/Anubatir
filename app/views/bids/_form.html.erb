@@ -4,10 +4,11 @@
 <br>
 <div class="container">
   <div class="row">
-    <div class="col-12 col-sm-8 col-md-4">
+    <div class="col-12 col-sm-12 col-md-12">
       <%= simple_form_for [@tender, @bid] do |f| %>
 
-        <h3>Add Items</h3>
+        <h5><em><strong>Instructions:</strong></em></h5>
+        <p>Click on the '⊕' to add BOQ items and/or on the '⊖' to delete BOQ items</p>
         <%= f.simple_fields_for :items do |item| %>
           <div class="form-inline">
             <%= render 'item_fields', f: item %>
@@ -15,7 +16,7 @@
         <% end %>
 
         <div class="links">
-          <%= link_to_add_association "Add BOQ items", f, :items %>
+          <%= link_to_add_association "", f, :items, class:"fa fa-plus-circle" %>
         </div>
 
         <%= f.submit "Submit", class: "btn btn-primary" %>

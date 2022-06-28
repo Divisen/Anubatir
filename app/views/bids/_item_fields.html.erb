@@ -1,12 +1,28 @@
 <div class="nested-fields">
   <div class="field">
-    <%= f.input :name %>
-    <%= f.input :quantity %>
-    <%= f.input :unit %>
-    <%= f.input :unit_rate %>
-    <%= f.input :amount %>
-    <%= link_to_remove_association "Remove Item", f %>
+    <table class="table table-bordered table-success" style="padding-bottom:0; margin-bottom:0;">
+      <tr>
+        <td>
+          <%= link_to_remove_association "", f, class:"fa fa-minus-circle" %>
+          <%= f.input :name, input_html: {rows: 1} %>
+        </td>
+        <td>
+          <br>
+          <%= f.input :quantity %>
+        </td>
+        <td>
+          <br>
+          <%= f.input :unit %>
+        </td>
+        <td>
+          <br>
+          <%= f.input :unit_rate %>
+        </td>
+        <td>
+          <br>
+          <%= f.input :amount %>
+        </td>
+      </tr>
+    </table>
   </div>
 </div>
-
-

@@ -41,7 +41,7 @@ data-action="scroll@window->navbar#updateNavbar">
               <%= image_tag "https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <% end %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "About me", "#", class: "dropdown-item fas fa-solid fa-user-alt" %>
+              <%= link_to "About me", user_path(current_user), class: "dropdown-item fas fa-solid fa-user-alt" %>
               <%= link_to "Settings", "#", class: "dropdown-item fas fa-cog" %>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item fas fa-sign-out-alt" %>
             </div>

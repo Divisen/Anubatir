@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_22_185045) do
+ActiveRecord::Schema.define(version: 2022_06_28_132925) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 2022_06_22_185045) do
     t.bigint "user_id", null: false
     t.float "quote"
     t.boolean "approved"
+    t.boolean "rejected"
     t.index ["tender_id"], name: "index_bids_on_tender_id"
     t.index ["user_id"], name: "index_bids_on_user_id"
   end
@@ -66,7 +67,7 @@ ActiveRecord::Schema.define(version: 2022_06_22_185045) do
   end
 
   create_table "items", force: :cascade do |t|
-    t.string "name"
+    t.text "name"
     t.integer "quantity"
     t.string "unit"
     t.integer "unit_rate"

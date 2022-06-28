@@ -1,0 +1,5 @@
+<br><br><br><br>
+<h2>It's alive</h2>
+
+<%= link_to "View bid", tender_bid_path(@bid.tender, @bid, format: :pdf) %>
+<%= link_to "Finalize", reject_tender_bids_path(@bid.tender)%>

@@ -22,4 +22,9 @@ class PagesController < ApplicationController
 
   def about
   end
+
+  def presignup
+    @skip_navbar = true
+    @skip_footer = true
+  end
 end

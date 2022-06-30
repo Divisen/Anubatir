@@ -7,5 +7,7 @@ class ChatroomsController < ApplicationController
   def show
     @message = Message.new
     @chatroom = Chatroom.find(params[:id])
+    @skip_navbar = true
+    @skip_footer = true
   end
 end

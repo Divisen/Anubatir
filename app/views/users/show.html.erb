@@ -23,10 +23,11 @@
             <p class="text-muted mb-4"><%=@user.address%></p>
             <div class="d-flex justify-content-center mb-2">
               <button type="button" class="btn btn-primary">Follow</button>
-              <button type="button" class="btn btn-outline-primary ms-1">Message</button>
-
-    <li><%= link_to "Messages", chatroom_path(@single_chatroom)  %></li>
- 
+              <% if @user == current_user %>
+                <%= link_to "Inbox", chatrooms_path, class:"btn btn-outline-primary ms-1" %>
+              <% else %>
+                <%= link_to "Messages", chatroom_path(@single_chatroom), class:"btn btn-outline-primary ms-1" %>
+              <% end %>
             </div>
           </div>
         </div>

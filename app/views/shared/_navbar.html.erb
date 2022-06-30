@@ -18,6 +18,9 @@ data-action="scroll@window->navbar#updateNavbar">
           <li class="nav-item active">
             <%= link_to "Services", "/services", class: "nav-link" %>
           </li>
+          <li class="nav-item">
+            <%= link_to "View tenders", tenders_path, class: "nav-link" %>
+          </li>
           <li class="nav-item active">
             <%= link_to "Projects", "/projects", class: "nav-link" %>
           </li>
@@ -32,9 +35,6 @@ data-action="scroll@window->navbar#updateNavbar">
             <%= link_to "Notifications", "#", class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Chat", chatrooms_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
             <%= link_to "Leave a testimonial", new_testimonial_path, class: "nav-link" %>
           </li>
            <li class="nav-item dropdown">
@@ -45,6 +45,7 @@ data-action="scroll@window->navbar#updateNavbar">
             <% end %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "About me", user_path(current_user), class: "dropdown-item fas fa-solid fa-user-alt" %>
+              <%= link_to "Inbox", chatrooms_path, class: "dropdown-item fa fa-inbox" %>
               <%= link_to "Settings", "#", class: "dropdown-item fas fa-cog" %>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item fas fa-sign-out-alt" %>
             </div>

@@ -1,7 +1,7 @@
 class ChatroomsController < ApplicationController
   before_action :authenticate_user!
   def index
-    @chatrooms = Chatroom.all
+   @user = current_user
   end
 
   def show

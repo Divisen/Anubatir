@@ -12,7 +12,11 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'conditions', to: 'pages#conditions'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  resources :users, only: :show
+  resources :users do
+    member do
+      get 'click'
+    end
+  end
   resources :chatrooms do
     resources :messages, only: :create
   end

@@ -26,7 +26,7 @@
               <% if @user == current_user %>
                 <%= link_to "Inbox", chatrooms_path, class:"btn btn-outline-primary ms-1" %>
               <% else %>
-                <%= link_to "Messages", chatroom_path(@single_chatroom), class:"btn btn-outline-primary ms-1" %>
+                <%= link_to "Messages", click_user_path(@user), class:"btn btn-outline-primary ms-1" %>
               <% end %>
             </div>
           </div>

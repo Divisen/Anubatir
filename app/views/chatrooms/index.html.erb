@@ -1,13 +1,19 @@
 <br><br><br><br><br>
 <h2>Direct Messages</h2>
 <ul>
-  <% @participants.reverse_each do |participant| %>
-    <li><%= link_to "#{participant.chatroom.name}", chatroom_path(participant.chatroom)  %></li>
-    <% if participant.chatroom.messages.last.present? %>
-      <% if participant.chatroom.messages.last.user == current_user %>
-        <li> Me: <%= participant.chatroom.messages.last.content %></li>
-      <% elsif %>
-        <li><%= participant.chatroom.messages.last.user.username %> <%= participant.chatroom.messages.last.content %></li>
+  <% @chatrooms.reverse_each do |chatroom| %>
+    <% chatroom.users.each do |user| %>
+      <% if user != current_user %>
+        <%= link_to chatroom_path(chatroom) do %>
+          <li style="padding-bottom:10px;"><%= cl_image_tag user.avatar.key, style:"width: 50px; height: 50px; object-fit:cover; border-radius: 50%;"%></li>
+        <% end %>
+      <% end %>
+    <% end %>
+    <% if chatroom.messages.last.present? %>
+      <% if chatroom.messages.last.user == current_user %>
+        <li> You: <%= chatroom.messages.last.content %></li>
+      <% else  %>
+        <li><%= chatroom.messages.last.user.username.capitalize %>: <%= chatroom.messages.last.content %></li>
       <% end %>
     <% end %>
   <% end %>

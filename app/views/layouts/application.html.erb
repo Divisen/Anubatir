@@ -13,10 +13,14 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
+    <% unless @skip_navbar %>
+      <%= render 'shared/navbar' %>
+    <% end %>
     <%= yield %>
-    <%= render 'shared/footer' %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <% unless @skip_footer %>
+      <%= render 'shared/footer' %>
+    <% end %>
+    <p class="notice" style="padding:0; margin:0;"><%= notice %></p>
+    <p class="alert" style="padding:0; margin:0;"><%= alert %></p>
   </body>
 </html>

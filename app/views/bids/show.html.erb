@@ -8,7 +8,7 @@
   <table class="table table-striped table-bordered ">
     <thead>
       <tr class="table-primary">
-        <th scope ="col">Name</th>
+        <th scope ="col" >Name</th>
         <th scope ="col">Quantity</th>
         <th scope ="col">Unit</th>
         <th scope ="col">Unit Rate (Rs)</th>
@@ -22,13 +22,12 @@
         <td><%= item.quantity %></td>
         <td><%= item.unit %></td>
         <td><%= item.unit_rate %></td>
-        <td ><%= item.amount %></td>
+        <td ><%= number_to_currency(item.amount, unit: "") %></td>
       </tr>
     <% @bid.quote  += item.amount %>
     <% end %>
   </table>
   <% @bid.save %>
-  <p>Total Amount quoted: Rs <%= @bid.quote %> </p>
+  <p>Total Amount quoted: <%= number_to_currency(@bid.quote, unit: "Rs ") %> </p>
   <%= link_to "Accept Bid", activate_tender_bid_path(@bid.tender, @bid)%>
 </div>
-

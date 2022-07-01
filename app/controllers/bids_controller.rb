@@ -4,33 +4,52 @@ class BidsController < ApplicationController
 
   def receipt
     @bid = Bid.find(params[:id])
-    Receipts::Statement.new(
+
+    @items = @bid.items.map do |item|
+      item
+    end
+
+    Receipts::Receipt.new(
       details: [
         ["Receipt Number", "123"],
         ["Date paid", Date.today],
-        ["Payment method", "Internet Bank Transfer"]
+        ["Payment method", "Internet Bank Transfer"],
+        [""],
+        [""],
+        [""],
+        [""],
+        [""],
+        [""],
+        [""],
+        [""],
+        ["<b>Contractor Details<b>                                                                                                  Client Details" ]
       ],
       company: {
-        name: "#{@bid.user.company_name}",
-        address: "#{@bid.user.address}",
-        email: "#{@bid.user.email}",
-        logo: Rails.root.join("app/assets/images/biglogo.png")
+        name: "Company: #{@bid.user.company_name}",
+        address: "Address: #{@bid.user.address}",
+        email: "Email: #{@bid.user.email}",
+        logo: File.expand_path("app/assets/images/logo.png")
       },
       recipient: [
-        "#{@bid.tender.user.first_name} #{@bid.tender.user.last_name}",
-        "#{@bid.tender.user.address}",
-        "City, State Zipcode",
-        nil,
-        "#{@bid.tender.user.email}"
+        "<b>Name: #{@bid.tender.user.first_name} #{@bid.tender.user.last_name}</b>",
+        "Address: #{@bid.tender.user.address}",
+        #nil,
+        "Email: #{@bid.tender.user.email}"
       ],
       line_items: [
-        ["<b>Item</b>", "<b>Unit Cost</b>", "<b>Quantity</b>", "<b>Amount</b>"],
-        ["Subscription", "$19.00", "1", "$19.00"],
-        [nil, nil, "Subtotal", "$19.00"],
-        [nil, nil, "Tax", "$1.12"],
-        [nil, nil, "Total", "$20.12"],
-        [nil, nil, "<b>Amount paid</b>", "$20.12"],
-        [nil, nil, "Refunded on #{Date.today}", "$5.00"]
+        ["<b>Name</b>", "<b>Quantity</b>", "<b>Unit</b>", "<b>Unit Rate</b>", "<b>Amount</b>"],
+        ["#{@items[0].nil? ? nil : @items[0].name}","#{@items[0].nil? ? nil : @items[0].quantity}", "#{@items[0].nil? ? nil : @items[0].unit}", "#{@items[0].nil? ? nil : @items[0].unit_rate}", "#{@items[0].nil? ? nil : @items[0].amount}" ],
+        ["#{@items[1].nil? ? nil : @items[1].name}","#{@items[1].nil? ? nil : @items[1].quantity}", "#{@items[1].nil? ? nil : @items[1].unit}", "#{@items[1].nil? ? nil : @items[1].unit_rate}", "#{@items[1].nil? ? nil : @items[1].amount}" ],
+        ["#{@items[2].nil? ? nil : @items[2].name}","#{@items[2].nil? ? nil : @items[2].quantity}", "#{@items[2].nil? ? nil : @items[2].unit}", "#{@items[2].nil? ? nil : @items[2].unit_rate}", "#{@items[2].nil? ? nil : @items[2].amount}" ],
+        ["#{@items[3].nil? ? nil : @items[3].name}","#{@items[3].nil? ? nil : @items[3].quantity}", "#{@items[3].nil? ? nil : @items[3].unit}", "#{@items[3].nil? ? nil : @items[3].unit_rate}", "#{@items[3].nil? ? nil : @items[3].amount}" ],
+        ["#{@items[4].nil? ? nil : @items[4].name}","#{@items[4].nil? ? nil : @items[4].quantity}", "#{@items[4].nil? ? nil : @items[4].unit}", "#{@items[4].nil? ? nil : @items[4].unit_rate}", "#{@items[4].nil? ? nil : @items[4].amount}" ],
+        ["#{@items[5].nil? ? nil : @items[5].name}","#{@items[5].nil? ? nil : @items[5].quantity}", "#{@items[5].nil? ? nil : @items[5].unit}", "#{@items[5].nil? ? nil : @items[5].unit_rate}", "#{@items[5].nil? ? nil : @items[5].amount}" ],
+        ["#{@items[6].nil? ? nil : @items[6].name}","#{@items[6].nil? ? nil : @items[6].quantity}", "#{@items[6].nil? ? nil : @items[6].unit}", "#{@items[6].nil? ? nil : @items[6].unit_rate}", "#{@items[6].nil? ? nil : @items[6].amount}" ],
+        ["#{@items[7].nil? ? nil : @items[7].name}","#{@items[7].nil? ? nil : @items[7].quantity}", "#{@items[7].nil? ? nil : @items[7].unit}", "#{@items[7].nil? ? nil : @items[7].unit_rate}", "#{@items[7].nil? ? nil : @items[7].amount}" ],
+        ["#{@items[8].nil? ? nil : @items[8].name}","#{@items[8].nil? ? nil : @items[8].quantity}", "#{@items[8].nil? ? nil : @items[8].unit}", "#{@items[8].nil? ? nil : @items[8].unit_rate}", "#{@items[8].nil? ? nil : @items[8].amount}" ],
+        ["#{@items[9].nil? ? nil : @items[9].name}","#{@items[9].nil? ? nil : @items[9].quantity}", "#{@items[9].nil? ? nil : @items[9].unit}", "#{@items[9].nil? ? nil : @items[9].unit_rate}", "#{@items[9].nil? ? nil : @items[9].amount}" ],
+        ["#{@items[10].nil? ? nil : @items[10].name}","#{@items[10].nil? ? nil : @items[10].quantity}", "#{@items[10].nil? ? nil : @items[10].unit}", "#{@items[10].nil? ? nil : @items[10].unit_rate}", "#{@items[10].nil? ? nil : @items[10].amount}" ],
+        [nil, nil,nil, "<b>Amount paid</b>", "Rs #{@bid.quote}"],
       ],
       footer: "Thanks for your business. Please contact us if you have any questions.")
   end

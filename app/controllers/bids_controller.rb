@@ -22,7 +22,14 @@ class BidsController < ApplicationController
         [""],
         [""],
         [""],
-        ["<b>Contractor Details<b>                                                                                                  Client Details" ]
+        [""],
+        [""],
+        [""],
+        [""],
+        [""],
+        [""],
+        [""],
+        ["<b>Contractor Details<b>                                                                              Client Details" ]
       ],
       company: {
         name: "Company: #{@bid.user.company_name}",

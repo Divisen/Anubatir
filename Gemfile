@@ -61,6 +61,9 @@ gem 'cocoon'
 #JQUERY
 gem 'jquery-rails'
 
+#TWILIO
+gem 'twilio-ruby'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'

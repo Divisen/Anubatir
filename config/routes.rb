@@ -21,6 +21,7 @@ Rails.application.routes.draw do
     resources :messages, only: :create
   end
   resources :testimonials, only: [:new, :create]
+  resources :video_chats
   resources :tenders do
     resources :bids do
       member do

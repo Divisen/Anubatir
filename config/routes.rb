@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'renovation', to: 'pages#renovation'
   get 'design', to: 'pages#design'
   get 'about', to: 'pages#about'
-  get 'conditions', to: 'pages#conditions'
+  get 'terms', to: 'pages#terms'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :users do
     member do

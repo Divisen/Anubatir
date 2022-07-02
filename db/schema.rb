@@ -141,7 +141,7 @@ ActiveRecord::Schema.define(version: 2022_07_01_215309) do
     t.string "first_name"
     t.string "last_name"
     t.string "username"
-    t.boolean "is_builder", default: false
+    t.boolean "is_builder"
     t.boolean "admin"
     t.string "company_name"
     t.string "address"

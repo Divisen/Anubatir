@@ -1,20 +1,40 @@
-<br><br><br><br>
+<div class="banner banner-services" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://media.istockphoto.com/photos/engineer-meeting-for-an-architectural-project-working-with-partner-picture-id1330168130?k=20&m=1330168130&s=612x612&w=0&h=AJrH7-_suqHUtgPS35N6xWI-ZftcMSE_3vGF8GoPaAY=);">
+  <div class="vcenter">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
+          <div class="banner-content">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <div class="container">
   <div class="row justify-content-center pt-10">
     <div class="col-sm-8">
       <h1>Search for a tender</h1>
-        <%= form_tag tenders_path, method: :get do %>
-        <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Find a tender"
-          %>
-          <%= submit_tag "Search", class: "btn btn-primary" %>
-        <% end %>
+      <div class="search-box">
+        <div>
+          <%= form_tag tenders_path, method: :get do %>
+          <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Find a tender", class: "input-search fas fa-search"
+            %>
+        </div>
+          <%= submit_tag "Search", class: "btn btn-outline-dark" %>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+
+
 
 <section class="portfolio-standard">
   <div class="container containerindex">

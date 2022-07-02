@@ -59,10 +59,10 @@
 
           <div class="link">
 
-            <div class="btn1">
+            <div class="btn tender">
               <button type="button" class="btn btn-outline-info"><%= link_to("Place a bid", new_tender_bid_path(@tender)) %></button>
             </div>
-            <div class="btn2">
+            <div class="btn tender">
               <button type="button" class="btn btn-outline-info"><%= link_to("Show bids", tender_bids_path(@tender)) %></button>
             </div>
           </div>
@@ -73,6 +73,9 @@
 
   </div>
 
+
+
+
   <div class="div4\">
    <button type="button" class="btn btn-primary map" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
     Click here to view map
@@ -80,14 +83,14 @@
 
     <!-- Modal -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="staticBackdropLabel">Location : <%= @tender.location %></h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-              <div style="width:100%; height:600px;"
+              <div class="map-resize"
                 data-controller = "mapbox"
                 data-mapbox-markers-value = "<%= @marker.to_json %>"
                 data-mapbox-api-key-value = "<%= ENV['MAPBOX_API_KEY'] %>">

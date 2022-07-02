@@ -11,7 +11,10 @@
 //   margin-left: 20px;
 //   object-fit: fill;
 // }
-
+.info1 {
+  margin-left: 20px;
+  margin-top: 40px;
+}
 .info2 {
   margin-top: 40px;
   margin-left: 20px;
@@ -56,6 +59,8 @@
   position: sticky;
   top: 4rem;
 }
+
+
 
 // .map {
 //   position: fixed;
@@ -115,4 +120,11 @@
     /* height: 200px; */
     border: 3px solid green;
     margin-left: 248px;
+}
+
+
+.map-resize {
+  width: 400px;
+  height: 600px;
+  object-fit: fill;
 }

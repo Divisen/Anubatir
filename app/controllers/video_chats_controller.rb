@@ -5,6 +5,7 @@ class VideoChatsController < ApplicationController
 
   def show
     @skip_footer = true
+    @skip_navbar = true
     @video_chat = VideoChat.find(params[:id])
     @client = Twilio::REST::Client.new(ENV['ACCOUNT_SID'], ENV['AUTH_TOKEN'])
     unless @video_chat.room_sid.present?

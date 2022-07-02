@@ -1,3 +1,11 @@
+.videochat-body-section {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f5fbff;
+}
+
 div.field,
 div.actions {
   margin-bottom: 10px; }
@@ -48,7 +56,7 @@ pre {
   }
 
 #remote-video{
-    border-radius: 15px;
+    border-radius: 22px;
     height: 80vh;
     background-color: black;
     margin-bottom: 15px;
@@ -61,13 +69,12 @@ pre {
 }
 
   #local-video{
-    border-radius: 15px;
     background-color: black;
-    height: 250px;
+    height: 127px;
     video{
-      border-radius: 15px;
+      padding: 10px 10px 10px 10px;
       width: 100%;
-      height: 250px;
+      height: 129px;
     }
   }
 
@@ -79,14 +86,33 @@ pre {
 
 .col-remote-video {
   position: relative;
-  top: 0;
-  left: 0;
-  border: 1px red solid;
+  top: 42px;
+  left: 195px;
+  // border: 1px red solid;
 }
 
 .col-local-video {
   position: absolute;
-  top: 9px;
-  right: 374px;
-  border: 1px green solid;
+  top: 57px;
+  right: 15rem;
+  width: 17%;
+  // border: 1px green solid;
+}
+
+.col-buttons-video {
+  position: fixed;
+  bottom: 0em;
+  left: 20rem;
+  // border: 1px blue solid;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  height: 85px;
+  background-color: #E3E3E2;
+  width: 48.5rem;
+}
+
+.sidebar-chat-video {
+  position: fixed;
+  bottom: 0em;
+  height: 722px;
 }

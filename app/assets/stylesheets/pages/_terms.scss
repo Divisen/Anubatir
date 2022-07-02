@@ -1,0 +1,110 @@
+  .terms-box{
+    // max-width: 460px;
+    // background-color: #111;
+    // color: #fff;
+    line-height: 200px;
+    height: 200px;
+    border: 3px solid rgb(243, 245, 243);
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif
+    // padding: 60px 30px;
+  }
+  
+  .terms-text{
+    padding: 0 20px;
+    height: 400px;
+    overflow-y: auto;
+    font-size: 14px;
+    font-weight: 500;
+    color: #181717;
+  }
+  
+  .terms-text::-webkit-scrollbar{
+    width: 2px;
+    background-color: #282828;
+  }
+  
+  .terms-text::-webkit-scrollbar-thumb{
+    background-color: #d13639;
+  }
+  
+  .terms-text h2{
+    text-transform: uppercase;
+  }
+  
+  .terms-box h4{
+    font-size: 13px;
+    text-align: center;
+    padding: 0 40px;
+  }
+  
+  .terms-box h4 span{
+    color: #d13639;
+  }
+  
+  .buttons-terms{
+    display: flex;
+    padding: 0 20px;
+    justify-content: space-between;
+  }
+  
+  .btn-terms{
+    height: 50px;
+    width: calc(50% - 6px);
+    border: 0;
+    border-radius: 6px;
+    font-size: 19px;
+    font-weight: 500;
+    color: #fff;
+    transition: .3s  linear;
+    cursor: pointer;
+  }
+  
+  section button {
+    background: black;
+  }
+  .button {
+    background-color: #004A7F;
+    -webkit-border-radius: 10px;
+    border-radius: 3px;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial;
+    font-size: 30px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+  }
+  @-webkit-keyframes glowing {
+    0% { background-color: #97bf2d; -webkit-box-shadow: 0 0 3px #97bf2d; }
+    50% { background-color: #97bf2d; -webkit-box-shadow: 0 0 40px #97bf2d; }
+    100% { background-color: #97bf2d; -webkit-box-shadow: 0 0 3px #97bf2d; }
+  }
+  
+  @-moz-keyframes glowing {
+    0% { background-color: #97bf2d; -moz-box-shadow: 0 0 3px #97bf2d; }
+    50% { background-color: #97bf2d; -moz-box-shadow: 0 0 40px #97bf2d; }
+    100% { background-color: #97bf2d; -moz-box-shadow: 0 0 3px #97bf2d; }
+  }
+  
+  @-o-keyframes glowing {
+    0% { background-color: #97bf2d; box-shadow: 0 0 3px #97bf2d; }
+    50% { background-color: #97bf2d; box-shadow: 0 0 40px #97bf2d; }
+    100% { background-color: #97bf2d; box-shadow: 0 0 3px #97bf2d; }
+  }
+  
+  @keyframes glowing {
+    0% { background-color: #97bf2d; box-shadow: 0 0 3px #97bf2d; }
+    50% { background-color: #97bf2d; box-shadow: 0 0 40px #97bf2d; }
+    100% { background-color: #97bf2d; box-shadow: 0 0 3px #97bf2d; }
+  }
+  
+  .button {
+    -webkit-animation: glowing 1500ms infinite;
+    -moz-animation: glowing 1500ms infinite;
+    -o-animation: glowing 1500ms infinite;
+    animation: glowing 1500ms infinite;
+  }
+  

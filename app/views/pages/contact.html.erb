@@ -1,59 +1,81 @@
+<div class="banner banner-services" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);">
+  <div class="vcenter">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
+          <div class="banner-contact">
+          <h1>Get in touch with us</h1>
+            <p>Anubatir is a privately owned, internationally focussed engineering enterprise with world-class capabilities spanning the entire client value chain.
+            We operate an integrated business model comprising the full range of engineering, construction and asset management services delivering single-source solutions for some
+            of the world's most prestigious public and private organisations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="contact-parent">
+  <div class="contact-div1">
+    <h1><strong>Get to know more</strong></h1>
+    <p>Please get in touch if you have any questions about Billing, or Technical Support</p>
+    <%= image_tag "expert.jpg", class:"contact-img"%>
+  </div>
+  <div class="contact-div2">
+    <div class="element-container2">
+         <h2>FEEL FREE TO CONTACT US</h2>
+         <p>Complete control over products allows us to ensure our customers receive the best quality prices and service. We take great pride in everything that we do.
+         </p>
+         <div class="element-container3">
+            <form action="/contact_page">
+              <label for="fname">First name:</label><br>
+              <input type="text" id="fname" name="fname" size="50" value=""><br>
+              <label for="fname">Last name:</label><br>
+              <input type="text" id="fname" name="fname" size="50" value=""><br>
+              <label for="lname">Your address email:</label><br>
+              <input type="text" id="lname" name="lname" size="50" value=""><br><br>
+              <textarea name="comments" id="comments" rows="5" cols="50" >Hey... say something!</textarea><br><br>
+              <input type="button" class="btn btn-info" value="Submit Message">
+            </form>
+          </div>
+    </div>
+  </div>
+  <div class="contact-div3">
+    <div class="element-container1">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
 <div class="container">
-  <div class="row">
-  <br>
-  <br>
-  <br>
-    <h1>Contact</h1>
-    <p>Anubatir is a privately owned, internationally focussed engineering enterprise with world-class capabilities spanning the entire client value chain. We operate an integrated business model comprising the full range of engineering, construction and asset management services delivering single-source solutions for some of the world's most prestigious public and private organisations.</p>
+
+  <div class="container contact">
 
   </div>
-<div class="container contact">
-  <h1><strong>CONTACT US</strong></h1>
-  <p>Please get in touch if you have any questions about Billing, or Technical Support</p>
 
 
     <div class="container_parent">
       <div class="container-mid">
         <div class="container_child class-img">
-          <%= image_tag "expert.jpg"%>
-          <div class="element-container1">
-          <h2>FEEL FREE TO CONTACT US !!</h2>
-          <p>Qui velit sunt aut nihil dignissimos sed doloremque itaque.
-          Sed voluptatem delectus aut error dicta ut debitis velit eos minima doloribus id quidem dolores sed fuga dolore.
-          Ea laborum rerum id enim labore et earum harum ab galisum temporibus nam labore dignissimos ut veritatis molestiae quo enim distinctio.
-          </p>
-        </div>
+
       </div>
       </div>
 
       <div class="container_child">
-        <div class="element-container2">
-         <h2>CONTACT US !!</h2>
-         <p>Qui velit sunt aut nihil dignissimos sed doloremque itaque.
-         Sed voluptatem delectus aut error dicta ut debitis velit eos minima doloribus id quidem dolores sed fuga dolore.
-         Ea laborum rerum id enim labore et earum harum ab galisum temporibus nam labore dignissimos ut veritatis molestiae quo enim distinctio.
-         </p>
-         <div class="element-container3">
-          <form action="/contact_page">
-            <label for="fname">First name:</label><br>
-            <input type="text" id="fname" name="fname" size="50" value=""><br>
-            <label for="fname">Last name:</label><br>
-            <input type="text" id="fname" name="fname" size="50" value=""><br>
-            <label for="lname">Your address email:</label><br>
-            <input type="text" id="lname" name="lname" size="50" value=""><br><br>
-            <textarea name="comments" id="comments" rows="5" cols="50" >Hey... say something!</textarea><br><br>
-            <input type="button" class="btn btn-info" value="Submit Message">
-            </form>
-          </div>
-        </div>
-    </div>
 
-    <div class="map">
-      <div style="width:100%; height:600px;"
-        data-controller = "mapbox"
-        data-mapbox-markers-value = "<%= @marker.to_json %>"
-        data-mapbox-api-key-value = "<%= ENV['MAPBOX_API_KEY'] %>">
-      </div>
+        </div>
     </div>
   </div>
 </div>

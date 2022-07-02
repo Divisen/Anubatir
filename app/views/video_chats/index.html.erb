@@ -1,0 +1,8 @@
+ <br><br><br><br><br>
+ <%= link_to "Create a video chat", new_video_chat_path %>
+  <% @video_chats.each do |videochat| %>
+    <ul>
+      <li><%= link_to "#{videochat.name}", video_chat_path(videochat) %></li>
+    </ul>
+  <% end %>
+<br><br><br><br><br>

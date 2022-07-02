@@ -11,6 +11,7 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 require("jquery")
+require("packs/video_call")
 
 Rails.start()
 Turbolinks.start()
@@ -19,3 +20,8 @@ ActiveStorage.start()
 import "controllers";
 import "bootstrap";
 import "cocoon";
+import $ from 'jquery';
+window.jQuery = $; window.$ = $;
+
+
+// Video Call

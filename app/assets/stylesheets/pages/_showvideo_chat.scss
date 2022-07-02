@@ -1,0 +1,118 @@
+.videochat-body-section {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f5fbff;
+}
+
+div.field,
+div.actions {
+  margin-bottom: 10px; }
+
+#notice {
+  color: green; }
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table; }
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0; }
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff; }
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square; }
+
+.videobody {
+  background-color: #fff;
+  color: #333;
+  margin: 33px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px; }
+
+  .buttons-panel{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+#remote-video{
+    border-radius: 22px;
+    height: 80vh;
+    background-color: black;
+    margin-bottom: 15px;
+    video{
+      width: 100%;
+      height: 100%;
+      padding: 27px 20px 0 20px;
+      border-radius: 15px;
+    }
+}
+
+  #local-video{
+    background-color: black;
+    height: 127px;
+    video{
+      padding: 10px 10px 10px 10px;
+      width: 100%;
+      height: 129px;
+    }
+  }
+
+.row-video {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.col-remote-video {
+  position: relative;
+  top: 42px;
+  left: 195px;
+  // border: 1px red solid;
+}
+
+.col-local-video {
+  position: absolute;
+  top: 57px;
+  right: 15rem;
+  width: 17%;
+  // border: 1px green solid;
+}
+
+.col-buttons-video {
+  position: fixed;
+  bottom: 0em;
+  left: 20rem;
+  // border: 1px blue solid;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  height: 85px;
+  background-color: #E3E3E2;
+  width: 48.5rem;
+}
+
+.sidebar-chat-video {
+  position: fixed;
+  bottom: 0em;
+  height: 722px;
+}

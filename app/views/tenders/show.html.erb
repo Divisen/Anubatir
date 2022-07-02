@@ -49,7 +49,7 @@
             <li><span class="left">Estimated end date:</span><span class="right"><%= @tender.estimated_end_date %></span></li>
             <li><span class="left">Project Type:</span><span class="right"><%= @tender.nature_of_works %></span></li>
             <li><span class="left">Location:</span><span class="right"><%= @tender.location %></span></li>
-            <li><span class="left">Budget:</span><span class="right">Rs. <%= @tender.estimated_budget %></span></li>
+            <li><span class="left">Budget:</span><span class="right"><%=  number_to_currency(@tender.estimated_budget, unit: "Rs ") %></span></li>
             </ul>
           </div>
           <br>

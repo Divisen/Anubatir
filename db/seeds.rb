@@ -33,7 +33,7 @@ countdown = users["entries"].count / 2
 i = 0
 j = 1
 countdown.times do
-  user1 = User.create(first_name:Faker::Name.first_name, last_name:Faker::Name.last_name, username:Faker::Internet.username, address:Faker::Address.street_address, email: "#{users["entries"][i]["email"]}", password: "#{users["entries"][i]["password"]}", is_builder: "#{users["entries"][i]["is_builder"]}")
+  user1 = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, username: Faker::Internet.username, address:Faker::Address.street_address, email: "#{users["entries"][i]["email"]}", password: "#{users["entries"][i]["password"]}", is_builder: "#{users["entries"][i]["is_builder"]}")
   avatar1 = users["entries"][i]["avatar"]
   file1 = URI.open("#{avatar1}")
   user1.avatar.attach(io: file1, filename: "avatar.jpg#{i}", content_type: 'image/jpg')

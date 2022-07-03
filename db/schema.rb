@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_03_130618) do
+ActiveRecord::Schema.define(version: 2022_07_03_204328) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2022_07_03_130618) do
     t.float "quote"
     t.boolean "approved"
     t.boolean "rejected"
+    t.integer "duration"
     t.index ["tender_id"], name: "index_bids_on_tender_id"
     t.index ["user_id"], name: "index_bids_on_user_id"
   end
@@ -66,21 +67,24 @@ ActiveRecord::Schema.define(version: 2022_07_03_130618) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "bid_id", null: false
     t.boolean "has_client_signed"
-    t.boolean "has_builder_signed"
+    t.boolean "has_builder_signed", default: true
     t.boolean "completed"
     t.integer "duration"
+    t.bigint "user_id", null: false
     t.index ["bid_id"], name: "index_contracts_on_bid_id"
+    t.index ["user_id"], name: "index_contracts_on_user_id"
   end
 
   create_table "items", force: :cascade do |t|
     t.text "name"
     t.integer "quantity"
     t.string "unit"
-    t.integer "unit_rate"
-    t.integer "amount"
+    t.float "unit_rate"
+    t.float "amount"
     t.bigint "bid_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "duration"
     t.index ["bid_id"], name: "index_items_on_bid_id"
   end
 
@@ -172,6 +176,7 @@ ActiveRecord::Schema.define(version: 2022_07_03_130618) do
   add_foreign_key "bids", "tenders"
   add_foreign_key "bids", "users"
   add_foreign_key "contracts", "bids"
+  add_foreign_key "contracts", "users"
   add_foreign_key "items", "bids"
   add_foreign_key "messages", "chatrooms"
   add_foreign_key "messages", "users"

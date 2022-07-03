@@ -2,4 +2,4 @@
 <h2>It's alive</h2>
 
 <%= link_to "View bid", tender_bid_path(@bid.tender, @bid, format: :pdf), target:"_blank" %>
-<%= link_to "Finalize", reject_tender_bids_path(@bid.tender)%>
+<%= link_to "Finalize", new_tender_bid_contract_path(@tender, @bid)%>

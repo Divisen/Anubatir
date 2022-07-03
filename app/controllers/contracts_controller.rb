@@ -9,23 +9,15 @@ class ContractsController < ApplicationController
   end
 
   def new
-    @contract = Contract.new
-  end
-
-  def create
-    @contract = Contract.new(contract_params)
+    @tender = Tender.find(params[:tender_id])
     @bid = Bid.find(params[:bid_id])
-    @contract.bid = @bid
-    if @contract.save
-      redirect_to contract_path(@contract)
-    else
-      render 'contracts/show'
-    end
+    Contract.create(bid_id: @bid.id, user_id: current_user.id, has_client_signed: true, completed: false, duration: @bid.duration)
+    redirect_to user_path(current_user)
   end
 
   private
 
   def contract_params
-    params.require(:contract).permit(:has_client_signed, :has_builder_signed, :completed, :images, :duration)
+    params.require(:contract).permit(:has_client_signed, :has_builder_signed, :completed, :images, :duration, :user_id, :bid_id)
   end
 end

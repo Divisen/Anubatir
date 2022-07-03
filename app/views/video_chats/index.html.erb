@@ -1,8 +1,16 @@
  <br><br><br><br><br>
- <%= link_to "Create a video chat", new_video_chat_path %>
-  <% @video_chats.each do |videochat| %>
-    <ul>
-      <li><%= link_to "#{videochat.name}", video_chat_path(videochat) %></li>
-    </ul>
+<ul>
+  <% @video_chats.reverse_each do |videochat| %>
+    <% videochat.users.each do |user| %>
+      <% if user != current_user %>
+        <%= link_to video_chat_path(videochat) do %>
+          <li style="padding-bottom:10px;"><%= cl_image_tag user.avatar.key, style:"width: 50px; height: 50px; object-fit:cover; border-radius: 50%;"%></li>
+        <% end %>
+        <% if videochat.updated_at %>
+          <li><%= user.username.capitalize%> called you on <%= videochat.created_at.strftime("%a %b %e at %l:%M %p") %></li>
+        <% end %>
+      <% end %>
+    <% end %>
   <% end %>
+</ul>
 <br><br><br><br><br>

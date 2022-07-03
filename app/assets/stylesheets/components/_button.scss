@@ -42,13 +42,13 @@
   color: white;
 }
 
-.btn1 {
+.btn-banner {
   border-radius: 50px;
   // background-color: #92c1ed;
-  border: 2px solid white;
-  color: white;
+  border: 1.5px solid #fff7f7;
+  color: #e8e8eef0;
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
   padding: 16px;
   width: 180px;
   transition: all 0.5s;
@@ -57,14 +57,14 @@
   box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
 }
 
-.btn1 {
+.btn-banner {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-.btn1:after {
+.btn-banner:after {
   content: '»';
   position: absolute;
   opacity: 0;
@@ -73,14 +73,14 @@
   transition: 0.5s;
 }
 
-.btn1:hover{
+.btn-banner:hover{
   padding-right: 24px;
   padding-left:8px;
   color: #bad4f4;
-  border: 2px solid #bad4f4;
+  border: 1.5px solid #bad4f4;
 }
 
-.btn1:hover:after {
+.btn-banner:hover:after {
   opacity: 1;
   right: 10px;
 }

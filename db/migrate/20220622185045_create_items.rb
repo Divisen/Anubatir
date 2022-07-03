@@ -4,8 +4,8 @@ class CreateItems < ActiveRecord::Migration[6.1]
       t.string :name
       t.integer :quantity
       t.string :unit
-      t.integer :unit_rate
-      t.integer :amount
+      t.float :unit_rate
+      t.float :amount
       t.belongs_to :bid, null: false, foreign_key: true
 
       t.timestamps

@@ -35,7 +35,7 @@ Rails.application.routes.draw do
         get 'reject'
         put 'reject'
       end
-      resources :contracs, only: [:index, :new, :create, :edit, :update ]
+      resources :contracts, only: [:index, :new, :create, :edit, :update ]
     end
   end
   resources :testimonials, only: :destroy

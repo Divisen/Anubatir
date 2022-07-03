@@ -1,6 +1,9 @@
 class VideoChatsController < ApplicationController
   def index
-    @video_chats = VideoChat.all
+    @vloggers = Vlogger.where(user_id: current_user.id)
+    @video_chats = @vloggers.map do |vlogger|
+      vlogger.video_chat
+    end
   end
 
   def show
@@ -22,24 +25,5 @@ class VideoChatsController < ApplicationController
 
     @token.add_grant grant
     @token = @token.to_jwt
-  end
-
-  def new
-    @video_chat = VideoChat.new
-  end
-
-  def create
-    @video_chat = VideoChat.new(video_chat_params)
-    if @video_chat.save
-      redirect_to video_chat_path(@video_chat)
-    else
-      render :new
-    end
-  end
-
-  private
-
-  def video_chat_params
-    params.require(:video_chat).permit(:name, :room_sid, :unique_name)
   end
 end

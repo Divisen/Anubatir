@@ -46,6 +46,7 @@ data-action="scroll@window->navbar#updateNavbar">
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "About me", user_path(current_user), class: "dropdown-item fas fa-solid fa-user-alt" %>
               <%= link_to "Inbox", chatrooms_path, class: "dropdown-item fa fa-inbox" %>
+              <%= link_to "Video logs", video_chats_path, class: "dropdown-item fas fa-video" %>
               <%= link_to "Settings", "#", class: "dropdown-item fas fa-cog" %>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item fas fa-sign-out-alt" %>
             </div>

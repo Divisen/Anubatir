@@ -53,11 +53,8 @@
   width: 180px;
   transition: all 0.5s;
   cursor: pointer;
-  margin: 36px;
+  margin: 24px;
   box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
-}
-
-.btn-banner {
   cursor: pointer;
   display: inline-block;
   position: relative;
@@ -157,11 +154,13 @@
 
 .btn-2 {
   letter-spacing: 0;
+  transition: all 0.4s ease-in-out;
 }
 
 .btn-2:hover,
 .btn-2:active {
-  letter-spacing: 5px;
+  letter-spacing: 2.5px;
+  transition: all 0.4s ease-in-out;
 }
 
 .btn-2:after,
@@ -174,7 +173,7 @@
   display: block;
   margin: 0 auto;
   position: relative;
-  transition: all 280ms ease-in-out;
+  transition: all 0.4s ease-in-out;
   width: 0;
 }
 

@@ -22,7 +22,7 @@
             <p class="text-muted mb-1">Full Stack Developer</p>
             <p class="text-muted mb-4"><%=@user.address%></p>
             <div class="d-flex justify-content-center mb-2">
-              <button type="button" class="btn btn-primary">Follow</button>
+              <%= link_to "Video", clickvideo_user_path(@user), class:"btn btn-outline-primary ms-1" %>
               <% if @user == current_user %>
                 <%= link_to "Inbox", chatrooms_path, class:"btn btn-outline-primary ms-1" %>
               <% else %>

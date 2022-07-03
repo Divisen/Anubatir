@@ -16,6 +16,9 @@ Rails.application.routes.draw do
     member do
       get 'click'
     end
+    member do
+      get 'clickvideo'
+    end
   end
   resources :chatrooms do
     resources :messages, only: :create

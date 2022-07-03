@@ -24,7 +24,6 @@ class PagesController < ApplicationController
   end
 
   def presignup
-    @skip_navbar = true
     @skip_footer = true
   end
 end

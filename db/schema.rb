@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_01_215309) do
+ActiveRecord::Schema.define(version: 2022_07_03_130618) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -141,7 +141,7 @@ ActiveRecord::Schema.define(version: 2022_07_01_215309) do
     t.string "first_name"
     t.string "last_name"
     t.string "username"
-    t.boolean "is_builder"
+    t.boolean "is_builder", default: false
     t.boolean "admin"
     t.string "company_name"
     t.string "address"
@@ -158,6 +158,15 @@ ActiveRecord::Schema.define(version: 2022_07_01_215309) do
     t.string "unique_name"
   end
 
+  create_table "vloggers", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "video_chat_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_vloggers_on_user_id"
+    t.index ["video_chat_id"], name: "index_vloggers_on_video_chat_id"
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "bids", "tenders"
@@ -170,4 +179,6 @@ ActiveRecord::Schema.define(version: 2022_07_01_215309) do
   add_foreign_key "participants", "users"
   add_foreign_key "tenders", "users"
   add_foreign_key "testimonials", "users"
+  add_foreign_key "vloggers", "users"
+  add_foreign_key "vloggers", "video_chats"
 end

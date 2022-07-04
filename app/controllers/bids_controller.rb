@@ -74,6 +74,7 @@ class BidsController < ApplicationController
   def new
     @bid = Bid.new
     @bid.user = current_user
+    @skip_footer = true
   end
 
   def create

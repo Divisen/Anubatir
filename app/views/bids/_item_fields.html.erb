@@ -1,14 +1,14 @@
 <div class="nested-fields">
-  <div class="field">
-    <table class="table table-bordered table-success" style="padding-bottom:0; margin-bottom:0;">
-      <tr>
+  <div class="field field-nomargin">
+    <table class="table table-bordered table-color" style="padding-bottom:0; margin-bottom:0;">
+      <tr class="<%= (@bid.items.each { |item| item.id % 2 ==0 ? "even" : "odd" } )%>">
         <td>
-          <%= link_to_remove_association "", f, class:"fa fa-minus-circle" %>
+          <%= link_to_remove_association " Delete ", f, class:"fas fa-window-close" %>
           <%= f.input :name, input_html: {rows: 1} %>
         </td>
         <td>
           <br>
-          <%= f.input :quantity %>
+          <%= f.input :quantity, input_html: {size: 20} %>
         </td>
         <td>
           <br>

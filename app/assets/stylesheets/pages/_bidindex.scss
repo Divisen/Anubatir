@@ -1,0 +1,104 @@
+.bidindex-result .bidindex-box {
+-webkit-box-shadow: 0 0 35px 0 rgba(130, 130, 130, 0.2);
+        box-shadow: 0 0 35px 0 rgba(130, 130, 130, 0.2);
+border-radius: 10px;
+padding: 10px 35px;
+}
+
+ul {
+list-style: none;
+}
+
+.list-disk li {
+list-style: none;
+margin-bottom: 12px;
+}
+
+.list-disk li:last-child {
+margin-bottom: 0;
+}
+
+.bidindex-box {
+  background-color: #f1f1f5;
+}
+
+.bidindex-box .img-holder {
+height: 65px;
+font-family: "Open Sans", sans-serif;
+color: #fff;
+font-size: 22px;
+font-weight: 700;
+display: -webkit-box;
+display: -ms-flexbox;
+-webkit-box-pack: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+-webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+border-radius: 65px;
+}
+
+.bidindex-content ul li {
+font-weight: 600;
+opacity: 0.75;
+border-bottom: 1px solid #ccc;
+padding: 10px 5px;
+}
+
+@media (min-width: 768px) {
+.bidindex-content ul li {
+  border-bottom: 0;
+  padding: 0;
+}
+}
+
+.bidindex-content ul li i {
+font-size: 20px;
+position: relative;
+top: 1px;
+}
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.h6-bidindex {
+  font-size: 12px;
+  padding-top: 6px;
+  color: rgb(48, 93, 142);
+
+  &:hover {
+    color: rgb(22, 36, 138);
+  }
+}
+
+.avatar-bidindex {
+  width: 70px!important;
+  height: 70px!important;
+  border-radius: 50%!important;
+  object-fit: cover!important;
+}
+
+.li-bidindex {
+  padding-left: 28px!important;
+  color: #1c3b6a;
+}
+
+.ul-bidindex {
+  margin-top: 12px;
+}
+
+.btn-bidindex {
+  background-color:#c45353;
+  color: white;
+  border-radius: 4px;
+
+  &:hover {
+    color: white;
+    background-color:#a83748;
+  }
+}
+
+.body-bidindex {
+  background-color: #ededf1;
+}

@@ -64,6 +64,7 @@ class BidsController < ApplicationController
   end
 
   def show
+    @skip_footer = true
     respond_to do |format|
       format.html
       format.json

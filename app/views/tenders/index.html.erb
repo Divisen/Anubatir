@@ -22,12 +22,13 @@
           <%= text_field_tag :query,
               params[:query],
               class: "form-control",
-              placeholder: "Find a tender", class: "input-search fas fa-search"
+              placeholder: "Find a tender"
             %>
         </div>
           <%= submit_tag "Search", class: "btn btn-outline-dark" %>
           <% end %>
         </div>
+        <div><%= link_to "Post a tender", new_tender_path %></div>
       </div>
     </div>
   </div>
@@ -73,5 +74,3 @@
     </div>
   </div>
 </section>
-
-      <%= link_to "Post a tender", new_tender_path %>

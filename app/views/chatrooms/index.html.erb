@@ -67,24 +67,30 @@
     </div>
     <div class="col-sm-9 col-md-9">
       <h2 class="h2-indexchat">Direct Messages</h2>
-      <ul style="margin-top:50px;">
-        <% @chatrooms.reverse_each do |chatroom| %>
-          <% chatroom.users.each do |user| %>
-            <% if user != current_user %>
-              <%= link_to chatroom_path(chatroom) do %>
-                <li style="padding-bottom:10px;"><%= cl_image_tag user.avatar.key, style:"width: 50px; height: 50px; object-fit:cover; border-radius: 50%;"%></li>
+      <div class="container col-11">
+        <ul style="margin-top:50px;">
+          <% @chatrooms.reverse_each do |chatroom| %>
+            <% chatroom.users.each do |user| %>
+              <% if user != current_user %>
+                <%= link_to chatroom_path(chatroom) do %>
+                  <div class="agent-userz d-flex">
+                    <li><%= cl_image_tag user.avatar.key,class:"img-agent-userz"%></li>
+                    <li class="name-agent-userz"><%= user.username%></li>
+                  </div>
+                <% end %>
+              <% end %>
+            <% end %>
+            <% if chatroom.messages.last.present? %>
+              <%# <li><%= chatroom.messages.last.created_at.strftime("%I:%M %p") %>    <%# </li> %>
+              <% if chatroom.messages.last.user == current_user %>
+                <li class="convo-msg"> You: <%= chatroom.messages.last.content %></li>
+              <% else  %>
+                <li class="convo-msg"><%= chatroom.messages.last.user.username.capitalize %>: <%= chatroom.messages.last.content %></li>
               <% end %>
             <% end %>
           <% end %>
-          <% if chatroom.messages.last.present? %>
-            <% if chatroom.messages.last.user == current_user %>
-              <li> You: <%= chatroom.messages.last.content %></li>
-            <% else  %>
-              <li><%= chatroom.messages.last.user.username.capitalize %>: <%= chatroom.messages.last.content %></li>
-            <% end %>
-          <% end %>
-        <% end %>
-      </ul>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

@@ -67,7 +67,7 @@
     </div>
     <div class="col-sm-9 col-md-9">
       <h2 class="h2-indexchat">Direct Messages</h2>
-      <ul>
+      <ul style="margin-top:50px;">
         <% @chatrooms.reverse_each do |chatroom| %>
           <% chatroom.users.each do |user| %>
             <% if user != current_user %>

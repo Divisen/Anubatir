@@ -3,62 +3,62 @@
   <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark sidebar-chat-video" style="width: 280px;">
     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
       <svg class="bi me-2" width="40" height="32">
-        <use xlink:href="#bootstrap"></use>
+        <%= image_tag "logo.png", style:"width:70px;height:70px;object-fit:cover;"%>
       </svg>
-      <span class="fs-4">Sidebar</span>
+      <span class="fs-4"></span>
     </a>
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
-        <a href="#" class="nav-link active" aria-current="page">
+        <a href="/" class="nav-link active nav-side" aria-current="page">
           <svg class="bi me-2" width="16" height="16">
-            <use xlink:href="#home"></use>
+            <%= image_tag "home.svg", style:"width:30px;height:30px;object-fit:cover; padding-right:4px;"%>
           </svg>
-          "Home"
+          Home
         </a>
       </li>
       <li>
-        <a href="" class="nav-link text-white">
+        <%= link_to user_path(current_user), class:"nav-link text-white" do%>
           <svg class="bi me-2" width="16" height="16">
-            <use xlink:href="#speedometer2"></use>
+            <%= image_tag "profile-icon.png", style:"width:30px;height:30px;object-fit:contain; padding-right:4px;"%>
           </svg>
-          "Dashboard"
-        </a>
+        Profile
+        <% end %>
       </li>
       <li>
-        <a href="" class="nav-link text-white">
+        <%= link_to chatrooms_path, class:"nav-link text-white" do%>
           <svg class="bi me-2" width="16" height="16">
-            <use xlink:href="#table"></use>
+            <%= image_tag "inbox-icon.png", style:"width:30px;height:30px;object-fit:contain; padding-right:4px;"%>
           </svg>
-          "Orders"
-        </a>
+          Inbox
+        <% end %>
       </li>
       <li>
-        <a href="" class="nav-link text-white">
+        <%= link_to video_chats_path, class:"nav-link text-white" do%>
           <svg class="bi me-2" width="16" height="16">
-            <use xlink:href="#table"></use>
+            <%= image_tag "videologs-icon.png", style:"width:30px;height:30px;object-fit:contain; padding-right:4px;"%>
           </svg>
-          "Products"
-        </a>
+          Video logs
+        <% end %>
       </li>
-      <li>
-        <a href="" class="nav-link text-white">
-          <svg class="bi me-2" width="16" height="16">
-            <use xlink:href="#table"></use>
-          </svg>
-          "Customers"
-        </a>
-      </li>
+          <%# <li>
+            <a href="" class="nav-link text-white">
+              <svg class="bi me-2" width="16" height="16">
+                <use xlink:href="#table"></use>
+              </svg>
+              "Customers"
+            </a>
+          </li> %>
     </ul>
     <hr>
     <div class="dropdown">
       <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-        <img src="" alt="" width="32" height="32" class="rounded-circle me-2">
-          <strong>mdo</strong>
+        <%= cl_image_tag current_user.avatar.key, class:"rounded-circle me-2 sidebar-avatar"%>
+        <strong><%= current_user.username %></strong>
       </a>
       <ul class="dropdown-menu dropdown menu-dark text-small shadow" aria-labelledby="dropdownUser1">
         <li>
-          <a href="#" class="dropdown-item">Sign Out</a>
+          <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "dropdown-item " %>
         </li>
       </ul>
     </div>

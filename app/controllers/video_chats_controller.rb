@@ -1,5 +1,7 @@
 class VideoChatsController < ApplicationController
   def index
+    @skip_footer = true
+    @skip_navbar = true
     @vloggers = Vlogger.where(user_id: current_user.id)
     @video_chats = @vloggers.map do |vlogger|
       vlogger.video_chat

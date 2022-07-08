@@ -18,18 +18,20 @@
           </form>
         </div>
         <div class="tfooter-links">
-          <%= link_to "View Receipt", tender_bid_path(@bid.tender, @bid, format: :pdf), target:"_blank", id:"bill", class:"btn btn-view"%>
-          <%= link_to "Accept", new_tender_bid_contract_path(@tender, @bid), id:"done", class:"btn btn-accept"%>
+          <%= button_to "View Receipt", tender_bid_path(@bid.tender, @bid, format: :pdf), target:"_blank", id:"bill", class:"btn btn-view", disabled:"disabled"%>
+          <%= button_to "Accept", new_tender_bid_contract_path(@tender, @bid), id:"done", class:"btn btn-accept", disabled:"disabled"%>
         </div>
       </div>
     </div>
   </section>
   <script>
-    $('#accepted1').click(function () {
-  if ($('#accepted1:checked,#accepted2:checked').length == 2)
-    $('#id_complete').removeAttr('disabled');
+    $('#accepted').click(function () {
+  if ($('#accepted:checked').length == 1)
+    $('#bill').removeAttr('disabled');
+     $('#done').removeAttr('disabled');
   else
-    $('#id_complete').attr('disabled','disabled');
+    $('#bill').attr('disabled','disabled');
+    $('#done').attr('disabled','disabled');
 });
   </script>
 </body>

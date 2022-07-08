@@ -1,9 +1,17 @@
+.body-showtender {
+  background-image: linear-gradient(90deg, #f0ecec 10%, #e8ecf1 90%);
+}
+
 .parent {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  margin-top: -10px;
+  margin-bottom: 100px;
+  margin-left: 15px;
+  height: 85vh;
   }
 
 // #carousel-picture-tender {
@@ -27,7 +35,8 @@
 }
 
 .showtender-link{
-  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 
@@ -58,13 +67,18 @@
   top: 4rem;
 }
 
+.div2 {
+  height: 100%;
+  margin-right: 80px;
+}
+
 .map {
   /* display: flex; */
   justify-content: center;
   /* align-items: center; */
   /* height: 200px; */
-  margin-left: 248px;
-  margin-top: -77px;
+  margin-left: 7px;
+  margin-top: 7px;
 }
 
 

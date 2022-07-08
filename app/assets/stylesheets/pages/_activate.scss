@@ -1,0 +1,47 @@
+.activate-terms-header {
+  align-items: center;
+  display: flex;
+  width: 103%;
+  height: 51px;
+  text-align: center;
+  border-radius: 6px 6px 0px 0px;
+  background-color: #f1404b;
+}
+
+.body-activate {
+  color: black;
+  background-image: asset-url('bg-terms.jpg');
+  background-size: cover;
+}
+
+.activate-terms-footer {
+  width: 103.5%;
+  height: 65px;
+  border-radius: 0px 0px 6px 6px;
+  background-color: #fbfbfb;
+}
+
+.terms-logo {
+  width: 25px;
+  height: 25px;
+  object-fit: fill;
+  padding-left: 5px;
+  margin-left: 83px;
+}
+
+.terms-p {
+  margin-top: 14px;
+  font-weight: 600;
+  margin-left: 6px;
+  color: white;
+}
+
+.label-activate {
+  margin-top: 4px;
+  margin-left: 40px;
+}
+
+.tfooter-links {
+  display: flex;
+  justify-content: space-around;
+}

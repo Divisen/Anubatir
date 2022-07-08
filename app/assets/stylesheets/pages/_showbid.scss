@@ -256,14 +256,27 @@ small
   color: white;
 }
 
-.link-bidshow {
+.link-bidshow-accept {
  background-color: #505c71;
  color: white;
  padding: 7px;
  border-radius: 4px;
+ margin-right: 16px;
 
  &:hover {
   background-color: #35485d;
   color: white;
  }
 }
+
+.link-bidshow-reject {
+  background-color: #C45353;
+  color: white;
+  padding: 7px;
+  border-radius: 4px;
+
+  &:hover {
+   background-color: #d43f3f;
+   color: white;
+  }
+ }

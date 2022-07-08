@@ -31,7 +31,7 @@ Rails.application.routes.draw do
         get 'activate'
         put 'activate'
       end
-      collection do
+      member do
         get 'reject'
         put 'reject'
       end

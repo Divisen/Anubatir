@@ -10,7 +10,9 @@
             <%# </p> %>
             <p class="p-banner">Whatever the level of support you require,</p>
             <p class="p-banner">we are sure that we will have a package that meets your needs.</p>
-            <%= link_to "Get Started", presignup_path, class:"btn-banner" %>
+            <% unless user_signed_in? %>
+              <%= link_to "Get Started", presignup_path, class:"btn-banner" %>
+            <% end %>
             <%# <a class="btn btn-flat" href="#">Apply now</a> %>
           </div>
         </div>

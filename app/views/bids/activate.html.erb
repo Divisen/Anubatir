@@ -8,21 +8,29 @@
         <%= image_tag 'logo-white.png',class:"terms-logo", style:"width:30px; height:30px; object-fit:cover;" %>
         <p class="terms-p">Anubatir Terms of Contract Agreement</p>
       </div>
-      <div style="overflow-y: scroll; height:515px; width:45vw; background-color:white;">
+      <div style="overflow-y: scroll; height:505px; width:45vw; background-color:white;">
         <%= render "pages/terms", bid: @bid %>
       </div>
       <div class="activate-terms-footer">
         <div>
           <form action="Accept button" method="get">
-            <label class="label-activate"><input type="checkbox" name="link2" value="link">  I Agree to the Terms of Contract Agreement and I read the Privacy Notice.</label>
+            <label class="label-activate" id="accepted"><input type="checkbox" name="link2" value="link">  I Agree to the Terms of Contract Agreement and I read the Privacy Notice.</label>
           </form>
         </div>
         <div class="tfooter-links">
-          <%= link_to "View bid", tender_bid_path(@bid.tender, @bid, format: :pdf), target:"_blank" %>
-          <%= link_to "Finalize", new_tender_bid_contract_path(@tender, @bid)%>
+          <%= link_to "View Receipt", tender_bid_path(@bid.tender, @bid, format: :pdf), target:"_blank", id:"bill", class:"btn btn-view"%>
+          <%= link_to "Accept", new_tender_bid_contract_path(@tender, @bid), id:"done", class:"btn btn-accept"%>
         </div>
       </div>
     </div>
   </section>
+  <script>
+    $('#accepted1').click(function () {
+  if ($('#accepted1:checked,#accepted2:checked').length == 2)
+    $('#id_complete').removeAttr('disabled');
+  else
+    $('#id_complete').attr('disabled','disabled');
+});
+  </script>
 </body>
-<%# width:45vw height:547 %>
+<%# render-div: height=505px; header: height=60px; footer: height:72px  %>

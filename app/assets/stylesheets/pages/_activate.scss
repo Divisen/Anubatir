@@ -1,22 +1,21 @@
 .activate-terms-header {
   align-items: center;
   display: flex;
-  width: 103%;
-  height: 51px;
+  width: 103.5%;
+  height: 60px;
   text-align: center;
   border-radius: 6px 6px 0px 0px;
-  background-color: #f1404b;
+  background-color: #1B3765;
 }
 
 .body-activate {
   color: black;
-  background-image: asset-url('bg-terms.jpg');
-  background-size: cover;
+  background-color:#b6cae4 ;
 }
 
 .activate-terms-footer {
   width: 103.5%;
-  height: 65px;
+  height: 72px;
   border-radius: 0px 0px 6px 6px;
   background-color: #fbfbfb;
 }
@@ -44,4 +43,28 @@
 .tfooter-links {
   display: flex;
   justify-content: space-around;
+}
+
+.btn-accept {
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: white;
+  background-color: #505c71;
+
+  &:hover {
+    color: white;
+    background-color: #4d648d;
+  }
+}
+
+.btn-view {
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: white;
+  background-color: #c45353;
+
+  &:hover {
+    color: white;
+    background-color: #d24747;
+  }
 }

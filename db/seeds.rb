@@ -24,6 +24,11 @@ Contract.destroy_all
 Bid.destroy_all
 Tender.destroy_all
 Testimonial.destroy_all
+Vlogger.destroy_all
+VideoChat.destroy_all
+Participant.destroy_all
+Message.destroy_all
+Chatroom.destroy_all
 User.destroy_all
 
 # Creating database using faker and json files

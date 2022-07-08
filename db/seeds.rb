@@ -42,7 +42,7 @@ countdown.times do
   avatar1 = users["entries"][i]["avatar"]
   file1 = URI.open("#{avatar1}")
   user1.avatar.attach(io: file1, filename: "avatar.jpg#{i}", content_type: 'image/jpg')
-  user2 = User.create(company_name:Faker::Company.name, username:Faker::Internet.username, address:Faker::Address.street_address, email: "#{users["entries"][j]["email"]}", password: "#{users["entries"][j]["password"]}", is_builder: "#{users["entries"][j]["is_builder"]}", admin: "#{users["entries"][j]["admin"]}")
+  user2 = User.create(company_name:Faker::Company.name, username:Faker::Internet.username, address:Faker::Address.street_address, grade_of_contractor: "#{('A'..'E').to_a.sample}",email: "#{users["entries"][j]["email"]}", password: "#{users["entries"][j]["password"]}", is_builder: "#{users["entries"][j]["is_builder"]}", admin: "#{users["entries"][j]["admin"]}")
   avatar2 = users["entries"][j]["avatar"]
   logo = users["entries"][j]["logo"]
   file2 = URI.open("#{avatar2}")

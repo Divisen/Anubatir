@@ -23,7 +23,7 @@
             <div class="fourcolcontent-bidshow post-bidshow">
               <h3 class="h3-bidshow" style="font-size: 24px;">Dear <%= @bid.tender.user.first_name.capitalize%> <%= @bid.tender.user.last_name.capitalize%>	,</h3>
               <p style="font-size:17px;"><%= (@bid.user.company_name) ? link_to("#{@bid.user.company_name.capitalize} Ltd", user_path(@bid.user), style:"font-weight:400; text-decoration:none; color:black;") : ""%> is pleased to present their proposal for <%= @bid.tender.title %>.
-                They are a Grade A contracting company and are located at <%= @bid.user.address %>	</p>
+                They are a Grade <%= @bid.user.grade_of_contractor %> contracting company and are located at <%= @bid.user.address %>	</p>
             </div>
             <div class="fourcolside-bidshow" id="comments-bidshow">
               <%= link_to user_path(@bid.user) do%>
@@ -75,9 +75,7 @@
               <p>Works are expected to be completed in <%= @bid.duration %> 	 days</p>
               <div class="tender-show-links">
                 <%= link_to "Accept Bid", activate_tender_bid_path(@bid.tender, @bid), class:"link-bidshow-accept"%>
-                <% unless @bid.approved = true %>
-                  <%= link_to "Reject Bid", reject_tender_bid_path(@bid.tender, @bid), class:"link-bidshow-reject"%>
-                <% end %>
+                <%= link_to "Reject Bid", reject_tender_bid_path(@bid.tender, @bid), class:"link-bidshow-reject"%>
               </div>
             </div>
           </div>

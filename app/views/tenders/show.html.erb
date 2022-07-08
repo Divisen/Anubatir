@@ -67,7 +67,7 @@
             <div class="showtender-link">
               <% if user_signed_in? %>
                 <div class="btn tender">
-                  <% unless current_user.is_builder = false || @tender.user == current_user %>
+                  <% unless current_user.is_builder != true || @tender.user == current_user %>
                     <button type="button" class="btn btn-outline-info"><%= link_to("Place a bid", new_tender_bid_path(@tender)) %></button>
                   <% end %>
                 </div>

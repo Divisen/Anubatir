@@ -27,7 +27,7 @@
             </div>
             <div class="fourcolside-bidshow" id="comments-bidshow">
               <%= link_to user_path(@bid.user) do%>
-                <h5 class="h5-bidshow"><%= cl_image_tag @bid.user.avatar.key, style:"width:100px; height:100px;object-fit:cover;"%>	</h5>
+                <h5 class="h5-bidshow"><%= cl_image_tag @bid.user.logo.key, style:"width:100px; height:100px;object-fit:cover;"%>	</h5>
               <% end %>
               <span style="font-style:italic; font-size:12px;"><%= (@bid.user.company_name) ? @bid.user.company_name.capitalize : ""%> 	Ltd </span>
             </div>

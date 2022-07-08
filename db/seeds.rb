@@ -44,8 +44,11 @@ countdown.times do
   user1.avatar.attach(io: file1, filename: "avatar.jpg#{i}", content_type: 'image/jpg')
   user2 = User.create(company_name:Faker::Company.name, username:Faker::Internet.username, address:Faker::Address.street_address, email: "#{users["entries"][j]["email"]}", password: "#{users["entries"][j]["password"]}", is_builder: "#{users["entries"][j]["is_builder"]}", admin: "#{users["entries"][j]["admin"]}")
   avatar2 = users["entries"][j]["avatar"]
+  logo = users["entries"][j]["logo"]
   file2 = URI.open("#{avatar2}")
+  file_logo = URI.open("#{logo}")
   user2.avatar.attach(io: file2, filename: "avatar.jpg#{j}", content_type: 'image/jpg')
+  user2.logo.attach(io: file_logo, filename: "logo.jpg#{j}", content_type: 'image/jpg')
 
   budget = (1000000..9999999).to_a.sample
   tender1 = Tender.create(title: "#{tenders["entries"][i]["title"]}", description: "#{tenders["entries"][i]["description"]}",estimated_budget: budget, location: "#{tenders["entries"][i]["location"]}", nature_of_works: "#{tenders["entries"][i]["nature_of_works"]}", user_id: "#{user1.id}")

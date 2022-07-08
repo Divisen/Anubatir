@@ -10,6 +10,7 @@
     </div>
   </div>
 </div>
+
 <body class="body-bidindex">
   <section class="section-bidindex">
     <div class="container">
@@ -31,7 +32,7 @@
                     <div class="bidindex-left my-4 d-md-flex align-items-center flex-wrap">
                       <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0">
                         <%= link_to user_path(bid.user) do%>
-                          <%= cl_image_tag bid.user.avatar.key, class:"avatar-bidindex"%>
+                          <%= cl_image_tag bid.user.logo.key, class:"avatar-bidindex"%>
                           <h6 class="text-center text-md-left h6-bidindex"><%= bid.user.company_name  %></h6>
                         <% end %>
                       </div>

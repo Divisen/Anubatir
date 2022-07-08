@@ -1,5 +1,5 @@
 class BidsController < ApplicationController
-  before_action :set_bid, only: [:show, :edit, :update, :destroy, :activate]
+  before_action :set_bid, only: [:show, :edit, :update, :destroy, :activate, :reject]
   before_action :set_tender, only: [:new, :create, :update, :index]
 
   def receipt
@@ -102,22 +102,13 @@ class BidsController < ApplicationController
     rejects.each do |reject|
       reject.update(rejected: true)
     end
-
-    # redirect_to tender_path(@tender)
   end
 
-  # def reject
-  #   @tender = Tender.find(params[:tender_id])
-  #   @bids = Bid.where tender_id: @tender.id
-  #   rejects = @bids.reject do |rejected_bid|
-  #     rejected_bid.approved == true
-  #   end
-  #   rejects.each do |reject|
-  #     reject.update(rejected: true)
-  #   end
-
-  #   redirect_to tender_path(@tender)
-  # end
+  def reject
+    @tender = Tender.find(params[:tender_id])
+    @bid.update(rejected: true)
+    redirect_to tender_path(@tender)
+  end
 
 
   def update

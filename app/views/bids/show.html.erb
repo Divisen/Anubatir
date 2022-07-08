@@ -27,7 +27,7 @@
             </div>
             <div class="fourcolside-bidshow" id="comments-bidshow">
               <%= link_to user_path(@bid.user) do%>
-                <h5 class="h5-bidshow"><%= cl_image_tag @bid.user.avatar.key, style:"width:100px; height:100px;object-fit:cover;"%>	</h5>
+                <h5 class="h5-bidshow"><%= cl_image_tag @bid.user.logo.key, style:"width:100px; height:100px;object-fit:cover;"%>	</h5>
               <% end %>
               <span style="font-style:italic; font-size:12px;"><%= (@bid.user.company_name) ? @bid.user.company_name.capitalize : ""%> 	Ltd </span>
             </div>
@@ -73,7 +73,12 @@
               <% @bid.save %>
               <p>Total Amount quoted: <%= number_to_currency(@bid.quote, unit: "Rs ") %> </p>
               <p>Works are expected to be completed in <%= @bid.duration %> 	 days</p>
-              <%= link_to "Accept Bid", activate_tender_bid_path(@bid.tender, @bid), class:"link-bidshow"%>
+              <div class="tender-show-links">
+                <%= link_to "Accept Bid", activate_tender_bid_path(@bid.tender, @bid), class:"link-bidshow-accept"%>
+                <% unless @bid.approved = true %>
+                  <%= link_to "Reject Bid", reject_tender_bid_path(@bid.tender, @bid), class:"link-bidshow-reject"%>
+                <% end %>
+              </div>
             </div>
           </div>
         </div>

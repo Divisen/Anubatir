@@ -67,7 +67,7 @@ ActiveRecord::Schema.define(version: 2022_07_03_204328) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "bid_id", null: false
     t.boolean "has_client_signed"
-    t.boolean "has_builder_signed"
+    t.boolean "has_builder_signed", default: true
     t.boolean "completed"
     t.integer "duration"
     t.bigint "user_id", null: false
@@ -79,8 +79,8 @@ ActiveRecord::Schema.define(version: 2022_07_03_204328) do
     t.text "name"
     t.integer "quantity"
     t.string "unit"
-    t.integer "unit_rate"
-    t.integer "amount"
+    t.float "unit_rate"
+    t.float "amount"
     t.bigint "bid_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -145,7 +145,7 @@ ActiveRecord::Schema.define(version: 2022_07_03_204328) do
     t.string "first_name"
     t.string "last_name"
     t.string "username"
-    t.boolean "is_builder"
+    t.boolean "is_builder", default: false
     t.boolean "admin"
     t.string "company_name"
     t.string "address"

@@ -7,6 +7,7 @@
   },
   {
     "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZSUyMHBpY3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    "logo": "https://www.designhill.com/design-blog/wp-content/uploads/2015/12/Zenobi-Roofing.jpg",
     "password": 123456,
     "email": "mail2@me.com",
     "is_builder": true,
@@ -20,6 +21,7 @@
   },
   {
     "avatar": "https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZmlsZSUyMHBpY3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    "logo": "https://www.designmantic.com/images/dm-construction-09.png",
     "password": 123456,
     "email": "mail4@me.com",
     "is_builder": true,
@@ -34,6 +36,7 @@
   },
   {
     "avatar": "https://images.unsplash.com/photo-1629467057571-42d22d8f0cbd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cHJvZmlsZSUyMHBpY3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    "logo": "https://images.brandsupply.com/logo-mihawk-oUtUqsgS_600_600.jpg",
     "password": 123456,
     "email": "mail6@me.com",
     "is_builder": true,
@@ -47,6 +50,7 @@
   },
   {
     "avatar": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHByb2ZpbGUlMjBwaWN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    "logo": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs2/209987137/original/047535f6d945f61be49d57cddb28b1b2b88ff07b/design-modern-wooden-home-decor-logo.jpg",
     "password": 123456,
     "email": "mail8@me.com",
     "is_builder": true,
@@ -61,6 +65,7 @@
   },
   {
     "avatar": "https://images.unsplash.com/photo-1610261003803-224ee66747e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzd8fHByb2ZpbGUlMjBwaWN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    "logo": "https://www.designhill.com/design-blog/wp-content/uploads/2015/12/CWS-Constructions.jpg",
     "password": 123456,
     "email": "mail10@me.com",
     "is_builder": true,
@@ -74,6 +79,7 @@
   },
   {
     "avatar": "https://images.unsplash.com/photo-1628890920690-9e29d0019b9b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGF2YXRhcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    "logo": "https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/04/attachment_99426829-e1555400090914.jpeg?auto=format&q=60&fit=max&w=930",
     "password": 123456,
     "email": "mail12@me.com",
     "is_builder": true,

@@ -744,17 +744,6 @@ section{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 // media queries 
 
 @media (max-width:1200px){
@@ -842,4 +831,102 @@ section{
       font-size: 2.5rem;
    }
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+:root {
+  --yellow:#f5bf23;
+  --black:#111;
+  --white:#fff;
+  --light-color:#666;
+  --light-bg:#eee;
+  --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+  --border:.1rem solid rgba(0,0,0,.3);
+}
+
+
+section {
+  padding: 5rem 10%;
+}
+
+.heading {
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  color: var(--black);
+  text-transform: capitalize;
+  padding-left: 1rem;
+  border-left: 1rem solid var(--yellow);
+}
+
+.projects {
+  background: var(--black);
+}
+
+.projects .heading {
+  color: var(--white);
+}
+
+.projects .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+}
+
+.projects .box-container .box {
+  cursor: initial;
+}
+
+.projects .box-container .box:hover .image img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.projects .box-container .box .image {
+  height: 40rem;
+  overflow: hidden;
+}
+
+.projects .box-container .box .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.projects .box-container .box .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: var(--white);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.projects .box-container .box .content .info {
+  padding: 1rem 2rem;
+}
+
+.projects .box-container .box .content .info h3 {
+  font-size: 1.7rem;
+  color: var(--black);
+  text-transform: capitalize;
+}
+
+.projects .box-container .box .content .info p {
+  font-size: 1.5rem;
+  color: var(--light-color);
+  line-height: 2;
+}
+
+.projects .box-container .box .content i {
+  width: 7.5rem;
+  font-size: 3rem;
+  background: var(--yellow);
+  color: var(--white);
+  cursor: pointer;
+  text-align: center;
+  line-height: 7.5rem;
 }

@@ -1,7 +1,16 @@
-<br>
-<br>
-<br>
-<br>
+<div class="banner-navbar" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));">
+  <div class="vcenter">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
+          <div class="banner-contact">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <body class="body-bidindex">
   <section class="section-bidindex">
     <div class="container">
@@ -18,31 +27,33 @@
           <div class="bidindex-search mb-60">
             <div class="bidindex-result">
               <% @bids.each do |bid|  %>
-                <div class="bidindex-box d-md-flex align-items-center justify-content-between mb-30">
-                  <div class="bidindex-left my-4 d-md-flex align-items-center flex-wrap">
-                    <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0">
-                      <%= link_to user_path(bid.user) do%>
-                        <%= cl_image_tag bid.user.avatar.key, class:"avatar-bidindex"%>
-                        <h6 class="text-center text-md-left h6-bidindex"><%= bid.user.company_name  %></h6>
-                      <% end %>
+                <% if bid.rejected != true %>
+                  <div class="bidindex-box d-md-flex align-items-center justify-content-between mb-30">
+                    <div class="bidindex-left my-4 d-md-flex align-items-center flex-wrap">
+                      <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0">
+                        <%= link_to user_path(bid.user) do%>
+                          <%= cl_image_tag bid.user.logo.key, class:"avatar-bidindex"%>
+                          <h6 class="text-center text-md-left h6-bidindex"><%= bid.user.company_name  %></h6>
+                        <% end %>
+                      </div>
+                      <div class="bidindex-content">
+                        <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
+                          <li class="mr-md-4 li-bidindex">
+                            <i class="fas fa-comments-dollar"></i> Total amount quoted: <%= number_to_currency(bid.quote, unit: "Rs ") %>
+                          </li>
+                        </ul>
+                        <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans ul-bidindex">
+                          <li class="mr-md-4 li-bidindex">
+                            <i class="far fa-clock"></i> Proposed duration of project: <%= bid.duration %> days
+                          </li>
+                        </ul>
+                      </div>
                     </div>
-                    <div class="bidindex-content">
-                      <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
-                        <li class="mr-md-4 li-bidindex">
-                          <i class="fas fa-comments-dollar"></i> Total amount quoted: <%= number_to_currency(bid.quote, unit: "Rs ") %>
-                        </li>
-                      </ul>
-                      <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans ul-bidindex">
-                        <li class="mr-md-4 li-bidindex">
-                          <i class="far fa-clock"></i> Proposed duration of project: <%= bid.duration %> days
-                        </li>
-                      </ul>
+                    <div class="job-right my-4 flex-shrink-0">
+                      <%= link_to "View offer", tender_bid_path(@tender,bid), class:"btn d-block w-100 d-sm-inline-block btn-bidindex" %>
                     </div>
                   </div>
-                  <div class="job-right my-4 flex-shrink-0">
-                    <%= link_to "View offer", tender_bid_path(@tender,bid), class:"btn d-block w-100 d-sm-inline-block btn-bidindex" %>
-                  </div>
-                </div>
+                <% end %>
               <% end %>
             </div>
           </div>

@@ -38,8 +38,12 @@ data-action="scroll@window->navbar#updateNavbar">
             <%= link_to "Leave a testimonial", new_testimonial_path, class: "nav-link btn-2" %>
           </li>
            <li class="nav-item dropdown">
-            <% if current_user.avatar.key %>
-              <%= cl_image_tag current_user.avatar.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% if current_user.avatar.key || current_user.logo.key %>
+              <% if current_user.is_builder != false %>
+                <%= cl_image_tag current_user.logo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <% else %>
+                <%= cl_image_tag current_user.avatar.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <% end %>
             <% else %>
               <%= image_tag "https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <% end %>

@@ -54,7 +54,11 @@
         <hr>
         <div class="dropdown">
           <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-            <%= cl_image_tag current_user.avatar.key, class:"rounded-circle me-2 sidebar-avatar"%>
+            <% if current_user.is_builder = true %>
+              <%= cl_image_tag current_user.logo.key, class:"rounded-circle me-2 sidebar-avatar"%>
+            <% else %>
+              <%= cl_image_tag current_user.avatar.key, class:"rounded-circle me-2 sidebar-avatar"%>
+            <% end %>
             <strong><%= current_user.username %></strong>
           </a>
           <ul class="dropdown-menu dropdown menu-dark text-small shadow" aria-labelledby="dropdownUser1">

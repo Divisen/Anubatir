@@ -1,3 +1,16 @@
+<div class="banner-navbar" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));">
+  <div class="vcenter">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
+          <div class="banner-contact">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <section style="background-color: #eee;">
   <div class="container py-5">
     <div class="row">
@@ -17,7 +30,11 @@
       <div class="col-lg-4">
         <div class="card mb-4">
           <div class="card-body text-center">
-            <%= cl_image_tag @user.avatar.key, class: "rounded-circle img-fluid", style:"width: 150px; height: 150px; object-fit:cover;", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% if @user.is_builder != false %>
+              <%= cl_image_tag @user.logo.key, class: "rounded-circle img-fluid", style:"width: 150px; height: 150px; object-fit:cover;" %>
+            <% else %>
+              <%= cl_image_tag @user.avatar.key, class: "rounded-circle img-fluid", style:"width: 150px; height: 150px; object-fit:cover;" %>
+            <% end %>
             <h5 class="my-3"><%=@user.username%></h5>
             <p class="text-muted mb-1">Full Stack Developer</p>
             <p class="text-muted mb-4"><%=@user.address%></p>

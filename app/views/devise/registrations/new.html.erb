@@ -32,6 +32,8 @@
               <%= f.input :password_confirmation,
                           required: true,
                           input_html: { autocomplete: "new-password" } %>
+              <%= f.input :avatar, as: :file %>
+              <%= f.input :about_me, label:"Brief Description" %>
             <% elsif params[:type]=="2" %>
               <%= f.input :company_name,
                           required: true,
@@ -50,6 +52,8 @@
               <%= f.input :password_confirmation,
                           required: true,
                           input_html: { autocomplete: "new-password" } %>
+                          <%= f.input :logo, as: :file %>
+              <%= f.input :about_me, label: "Company Bio" %>
               <%= f.hidden_field :is_builder,
                           value: 'true',
                           input_html: { checked: true } %>

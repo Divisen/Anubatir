@@ -3,7 +3,8 @@
     "avatar": "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZSUyMHBpY3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
     "password": 123456,
     "email": "mail@me.com",
-    "is_builder": false
+    "is_builder": false,
+    "about_me": "I'm an award-winning content writer who has eight years of experience creating compelling articles and short stories. I'm continuously searching for new topics and stories to capture the attention of new readers. With my knowledge and experience, I can help you fulfill your content creation goals."
   },
   {
     "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZSUyMHBpY3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
@@ -11,13 +12,15 @@
     "password": 123456,
     "email": "mail2@me.com",
     "is_builder": true,
-    "admin": false
+    "admin": false,
+    "about_me": "We are a representative Industrial Construction operator providing full range of service in the sphere of Civil Construction & Mechanical Engineering worldwide for any type of industrial soultions."
   },
   {
     "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmlsZSUyMHBpY3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
     "password": 123456,
     "email": "mail3@me.com",
-    "is_builder": false
+    "is_builder": false,
+    "about_me": "I am an experienced graphic designer with over 10 years of experience specializing in logo design. Besides hosting several graphic design seminars, I create relevant and original logos that enhance a company's brand recognition. My unique experience and creative mindset help companies remain current in a consistently evolving market."
   },
   {
     "avatar": "https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZmlsZSUyMHBpY3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
@@ -25,14 +28,15 @@
     "password": 123456,
     "email": "mail4@me.com",
     "is_builder": true,
-    "admin": false
-
+    "admin": false,
+    "about_me": "Leading The Way In Building And Civil Construction. Committed To Delivering High Quality Construction Projects And Innovate Design!."
   },
   {
     "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
     "password": 123456,
     "email": "mail5@me.com",
-    "is_builder": false
+    "is_builder": false,
+    "about_me": "I'm a registered nurse who's made it his life's mission to provide compassionate care and support to everyone. With over 12 years of experience in nursing and critical care, my experience can allow me to help care facilities manage and care for a wide variety of individuals. I'm dedicated to providing you with the best care and support that you need to recover and maintain your health."
   },
   {
     "avatar": "https://images.unsplash.com/photo-1629467057571-42d22d8f0cbd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cHJvZmlsZSUyMHBpY3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
@@ -40,13 +44,15 @@
     "password": 123456,
     "email": "mail6@me.com",
     "is_builder": true,
-    "admin": false
+    "admin": false,
+    "about_me": "Yellow Hats is a leading developer of A-grade commercial, industrial and residential projects in USA. Since its foundation the company has doubled its turnover year on year, with its staff numbers swelling accordingly. Today Yellow Hats has over 4,000 professionals on its payroll. The company is active in Middle East, CIS and Europe. Yellow Hats has a team of specialists capable of maximizing the result and delivering projects of any complexity and scope. Our employees are acclaimed experts in such areas as project."
   },
   {
     "avatar": "https://images.unsplash.com/photo-1577880216142-8549e9488dad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHByb2ZpbGUlMjBwaWN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
     "password": 123456,
     "email": "mail7@me.com",
-    "is_builder": false
+    "is_builder": false,
+    "about_me": "Hi, I believe that educating people about how culture and food correlate helps individuals understand more about themselves. I have nine years of experience exploring and discovering the unique recipes made by communities around the world, and I use my knowledge to create custom and memorable events. I believe that bringing together culture, food and people can help individuals connect and bond, and I intend to bring that experience to you."
   },
   {
     "avatar": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHByb2ZpbGUlMjBwaWN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
@@ -54,14 +60,15 @@
     "password": 123456,
     "email": "mail8@me.com",
     "is_builder": true,
-    "admin": false
+    "admin": false,
+    "about_me": "We are one of the oldest construction companies in Mauritius and is resolutely geared towards quality and innovative construction techniques while respecting the environment."
   },
   {
     "avatar": "https://images.unsplash.com/photo-1581391528803-54be77ce23e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHByb2ZpbGUlMjBwaWN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
     "password": 123456,
     "email": "mail9@me.com",
-    "is_builder": false
-
+    "is_builder": false,
+    "about_me": "Hi, I believe that educating people about how culture and food correlate helps individuals understand more about themselves. I have nine years of experience exploring and discovering the unique recipes made by communities around the world, and I use my knowledge to create custom and memorable events. I believe that bringing together culture, food and people can help individuals connect and bond, and I intend to bring that experience to you."
   },
   {
     "avatar": "https://images.unsplash.com/photo-1610261003803-224ee66747e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzd8fHByb2ZpbGUlMjBwaWN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
@@ -69,13 +76,16 @@
     "password": 123456,
     "email": "mail10@me.com",
     "is_builder": true,
-    "admin": false
+    "admin": false,
+    "about_me": "Our company was set up in the early 1980s and was recognized for its broad expertise in the construction and building industry.  Thanks to its tremendous success, the company has expanded its business activities and now operates under the name of N-G Group.  Apart from construction services, the group is also specialized in property and real estate development, rental and logistic services.."
   },
   {
     "avatar": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
     "password": 123456,
     "email": "mail11@me.com",
-    "is_builder": false
+    "is_builder": false,
+    "about_me": "I have eight years of experience enhancing and executing company marketing strategies. With a bachelor's in marketing, I've helped my company increase revenues by $1.3 million over three years. My professional experience can help me design unique marketing strategies that align with your company's values, customer base and overall mission."
+
   },
   {
     "avatar": "https://images.unsplash.com/photo-1628890920690-9e29d0019b9b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGF2YXRhcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
@@ -83,7 +93,8 @@
     "password": 123456,
     "email": "mail12@me.com",
     "is_builder": true,
-    "admin": true
+    "admin": true,
+    "about_me": "Our company is a private equity-minded investment holding company that focuses on value creation, liquidity generation, and long-term planning."
   }
 ]
 }

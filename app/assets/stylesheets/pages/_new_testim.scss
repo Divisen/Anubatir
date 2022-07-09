@@ -1,0 +1,33 @@
+.section-newtestim {
+  height: 100vh;
+  width: 100vw;
+  background-color: #dae6f361;
+  background-size: 84vh 50vw;
+  background-image: asset-url('reviews.svg');
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.form-testim {
+  border-radius: 8px;
+  height: 38px;
+}
+
+.btn-review {
+  margin-left:70px;
+  padding-left:110px;
+  padding-right:111px;
+  margin-top: 6px;
+  border-radius:4px;
+  background-color: #C45353;
+  border-color:#C45353;
+}
+
+#testimonial_rating {
+  border-radius:8px;
+}
+
+#testimonial_content {
+  border-radius:8px;
+}
+

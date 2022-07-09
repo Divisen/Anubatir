@@ -68,12 +68,12 @@
               <% if user_signed_in? %>
                 <div class="btn tender">
                   <% unless current_user.is_builder != true || @tender.user == current_user %>
-                    <button type="button" class="btn btn-outline-info"><%= link_to("Place a bid", new_tender_bid_path(@tender)) %></button>
+                    <%= link_to("Place a bid", new_tender_bid_path(@tender), class:"btn btn-tendershow") %>
                   <% end %>
                 </div>
                 <% if @tender.user == current_user %>
                   <div class="btn tender">
-                    <button type="button" class="btn btn-outline-info"><%= link_to("Show bids", tender_bids_path(@tender)) %></button>
+                    <%= link_to("View offers", tender_bids_path(@tender), class:"btn btn-tendershow") %>
                   </div>
                 <% end %>
               <% end %>

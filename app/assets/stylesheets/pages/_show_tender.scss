@@ -96,6 +96,20 @@ margin-bottom: 36px;
 margin-bottom: 56px;
 }
 
+.search-box {
+  margin-top: 48px;
+  display: flex;
+  justify-content: space-around;
+}
+.btn-search{
+  margin-left: 15px;
+}
+
+.btn-post{
+  float: right;
+  margin-left: 420px;
+}
+
 
 // .map {
 //   position: fixed;

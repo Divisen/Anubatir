@@ -21,9 +21,9 @@ data-action="scroll@window->navbar#updateNavbar">
           <li class="nav-item">
             <%= link_to "View tenders", tenders_path, class: "nav-link btn-2" %>
           </li>
-          <li class="nav-item active">
+          <%# <li class="nav-item active">
             <%= link_to "Projects", "/projects", class: "nav-link btn-2" %>
-          </li>
+          <%# </li> %>
           <li class="nav-item active">
             <%= link_to "Contact", "/contact", class: "nav-link btn-2" %>
           </li>
@@ -31,9 +31,9 @@ data-action="scroll@window->navbar#updateNavbar">
             <%= link_to "About us", "/about", class: "nav-link btn-2" %>
           </li>
         <% if user_signed_in? %>
-          <li class="nav-item">
+          <%# <li class="nav-item">
             <%= link_to "Notifications", "#", class: "nav-link btn-2" %>
-          </li>
+          <%# </li> %>
           <li class="nav-item">
             <%= link_to "Leave a testimonial", new_testimonial_path, class: "nav-link btn-2" %>
           </li>

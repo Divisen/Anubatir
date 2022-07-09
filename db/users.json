@@ -95,6 +95,24 @@
     "is_builder": true,
     "admin": true,
     "about_me": "Our company is a private equity-minded investment holding company that focuses on value creation, liquidity generation, and long-term planning."
+  },
+  {
+    "avatar": "https://avatars.githubusercontent.com/u/96942503?v=4",
+    "password": 123456,
+    "email": "mail13@me.com",
+    "is_builder": false,
+    "about_me": "Living the dream in Australia, looking for new ventures in Mauritius. With a high vision of building my dream house, looking for professional builders to work on a prestigious project with final touch of excellence."
+  },
+  {
+    "avatar": "https://images.unsplash.com/photo-1628890920690-9e29d0019b9b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGF2YXRhcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    "logo": "https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/04/attachment_99426829-e1555400090914.jpeg?auto=format&q=60&fit=max&w=930",
+    "password": 123456,
+    "email": "mail14@me.com",
+    "is_builder": true,
+    "admin": true,
+    "about_me": "Our company is a private equity-minded investment holding company that focuses on value creation, liquidity generation, and long-term planning."
   }
 ]
 }
+
+

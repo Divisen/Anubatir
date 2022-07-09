@@ -15,18 +15,21 @@
 <div class="container">
   <div class="row justify-content-center pt-10">
     <div class="col-sm-8">
-      <h1>Search for a tender</h1>
+      <%# <h1>Search for a tender</h1> %>
       <div class="search-box">
         <div>
           <%= form_tag tenders_path, method: :get do %>
           <%= text_field_tag :query,
               params[:query],
-              class: "form-control",
+              class: "form-control form-indextender",
               placeholder: "Find a tender"
             %>
         </div>
-          <%= submit_tag "Search", class: "btn btn-outline-dark" %>
+          <%= submit_tag "Search", class: "btn btn-outline-dark btn-search", style:"margin-left:0; border-radius: 8px 8px 8px 8px; text-align:center; padding-left:23px; height:38px; margin-left: 14px; padding: 0px 14px; background-color: #92a6bb; color: white; border:#92a6bb;" %>
           <% end %>
+          <div>
+          <%= link_to "Post a tender", new_tender_path, class: "btn btn-primary", style:"margin-right: 31px; border-radius: 8px; margin-left: 16px; background-color: #C45353; border: #C45353;" %>
+          </div>
         </div>
       </div>
     </div>
@@ -73,5 +76,3 @@
     </div>
   </div>
 </section>
-
-      <%= link_to "Post a tender", new_tender_path %>

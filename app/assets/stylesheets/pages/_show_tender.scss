@@ -96,6 +96,20 @@ margin-bottom: 36px;
 margin-bottom: 56px;
 }
 
+.search-box {
+  margin-top: 48px;
+  display: flex;
+  justify-content: space-around;
+}
+.btn-search{
+  margin-left: 15px;
+}
+
+.btn-post{
+  float: right;
+  margin-left: 420px;
+}
+
 .btn-tendershow {
   background-color: #c45353;
   border-radius: 4px;
@@ -104,6 +118,19 @@ margin-bottom: 56px;
   &:hover {
     color: white!important;
     background-color: #d43434;
+  }
+}
+
+.btn-tendershow-map {
+  background-color: #35485d;
+  color: white;
+  border-radius: 4px;
+  margin-left: 17px;
+  margin-top: 7px;
+
+  &:hover {
+    color: white!important;
+    background-color: #163150;
   }
 }
 

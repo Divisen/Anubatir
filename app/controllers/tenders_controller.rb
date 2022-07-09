@@ -13,6 +13,7 @@ class TendersController < ApplicationController
     @marker = [{
       lat: @tender.latitude,
       lng: @tender.longitude
+      # image_url: helpers.asset_url("marker_location.png")
     }]
   end
 

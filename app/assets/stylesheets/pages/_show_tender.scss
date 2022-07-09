@@ -107,6 +107,18 @@ margin-bottom: 56px;
   }
 }
 
+.btn-tendershow-map {
+  background-color: #35485d;
+  color: white;
+  border-radius: 4px;
+  margin-left: 17px;
+  margin-top: 7px;
+
+  &:hover {
+    color: white!important;
+    background-color: #163150;
+  }
+}
 // .map {
 //   position: fixed;
 //   top: 50%;

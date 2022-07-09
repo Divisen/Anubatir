@@ -2,9 +2,9 @@
   <div class="row">
     <div class="col-12 col-sm-8 col-md-4">
       <%= simple_form_for @testimonial do |f| %>
-        <%= f.input :rating, collection: 0..5 %>
-        <%= f.input :content %>
-        <%= f.submit "Submit", class: "btn btn-primary" %>
+        <%= f.input :content, class:"form-testim", label:"Leave a testimonial" %>
+        <%= f.input :rating, collection: 0..5, class:"form-testim", style:"border-radius:8px;" %>
+        <%= f.submit "Submit", class: "btn btn-primary btn-review", style:"margin-left:70px; padding-left:110px: padding-right:111px; margin-top: 6px; border-radius:4px; background-color: #C45353; border-color:#C45353;" %>
       <% end %>
     </div>
   </div>

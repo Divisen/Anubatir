@@ -96,6 +96,20 @@ margin-bottom: 36px;
 margin-bottom: 56px;
 }
 
+.search-box {
+  margin-top: 48px;
+  display: flex;
+  justify-content: space-around;
+}
+.btn-search{
+  margin-left: 15px;
+}
+
+.btn-post{
+  float: right;
+  margin-left: 420px;
+}
+
 .btn-tendershow {
   background-color: #c45353;
   border-radius: 4px;
@@ -119,6 +133,7 @@ margin-bottom: 56px;
     background-color: #163150;
   }
 }
+
 // .map {
 //   position: fixed;
 //   top: 50%;

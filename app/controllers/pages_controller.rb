@@ -11,13 +11,13 @@ class PagesController < ApplicationController
   def contact
   end
 
-  def construction
+  def client
   end
 
-  def renovation
+  def builder
   end
 
-  def design
+  def subtrade
   end
 
   def about

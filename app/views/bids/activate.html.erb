@@ -18,13 +18,13 @@
           </form>
         </div>
         <div class="tfooter-links">
-          <%= button_to "View Receipt", tender_bid_path(@bid.tender, @bid, format: :pdf), target:"_blank", id:"bill", class:"btn btn-view", disabled:"disabled"%>
-          <%= button_to "Accept", new_tender_bid_contract_path(@tender, @bid), id:"done", class:"btn btn-accept", disabled:"disabled"%>
+          <%= link_to "View Receipt", tender_bid_path(@bid.tender, @bid, format: :pdf), target:"_blank", id:"bill", class:"btn btn-view"%>
+          <%= link_to "Accept", new_tender_bid_contract_path(@tender, @bid), id:"done", class:"btn btn-accept"%>
         </div>
       </div>
     </div>
   </section>
-  <script>
+  <%# <script>
     $('#accepted').click(function () {
   if ($('#accepted:checked').length == 1)
     $('#bill').removeAttr('disabled');
@@ -33,6 +33,6 @@
     $('#bill').attr('disabled','disabled');
     $('#done').attr('disabled','disabled');
 });
-  </script>
+  </script> %>
 </body>
 <%# render-div: height=505px; header: height=60px; footer: height:72px  %>

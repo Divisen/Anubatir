@@ -38,17 +38,14 @@ countdown = users["entries"].count / 2
 i = 0
 j = 1
 countdown.times do
-  user1 = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, username: Faker::Internet.username, address:Faker::Address.street_address, email: "#{users["entries"][i]["email"]}", password: "#{users["entries"][i]["password"]}", is_builder: "#{users["entries"][i]["is_builder"]}", about_me: "#{users["entries"][i]["about_me"]}")
+  user1 = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, username: Faker::Internet.username, address:Faker::Address.street_address, email: "#{users["entries"][i]["email"]}", password: "#{users["entries"][i]["password"]}", is_builder: "#{users["entries"][i]["is_builder"]}")
   avatar1 = users["entries"][i]["avatar"]
   file1 = URI.open("#{avatar1}")
   user1.avatar.attach(io: file1, filename: "avatar.jpg#{i}", content_type: 'image/jpg')
-  user2 = User.create(company_name:Faker::Company.name, username:Faker::Internet.username, address:Faker::Address.street_address, grade_of_contractor: "#{('A'..'E').to_a.sample}",email: "#{users["entries"][j]["email"]}", password: "#{users["entries"][j]["password"]}", is_builder: "#{users["entries"][j]["is_builder"]}", admin: "#{users["entries"][j]["admin"]}", about_me: "#{users["entries"][j]["about_me"]}")
+  user2 = User.create(company_name:Faker::Company.name, username:Faker::Internet.username, address:Faker::Address.street_address, email: "#{users["entries"][j]["email"]}", password: "#{users["entries"][j]["password"]}", is_builder: "#{users["entries"][j]["is_builder"]}", admin: "#{users["entries"][j]["admin"]}")
   avatar2 = users["entries"][j]["avatar"]
-  logo = users["entries"][j]["logo"]
   file2 = URI.open("#{avatar2}")
-  file_logo = URI.open("#{logo}")
   user2.avatar.attach(io: file2, filename: "avatar.jpg#{j}", content_type: 'image/jpg')
-  user2.logo.attach(io: file_logo, filename: "logo.jpg#{j}", content_type: 'image/jpg')
 
   budget = (1000000..9999999).to_a.sample
   tender1 = Tender.create(title: "#{tenders["entries"][i]["title"]}", description: "#{tenders["entries"][i]["description"]}",estimated_budget: budget, location: "#{tenders["entries"][i]["location"]}", nature_of_works: "#{tenders["entries"][i]["nature_of_works"]}", user_id: "#{user1.id}")

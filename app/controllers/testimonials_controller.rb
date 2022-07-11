@@ -7,7 +7,7 @@ class TestimonialsController < ApplicationController
     @testimonial = Testimonial.new(testimonial_params)
     @testimonial.user = current_user
     if @testimonial.save
-      redirect_to 'root'
+      redirect_to '/'
     else
       render :new
     end

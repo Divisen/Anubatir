@@ -78,7 +78,11 @@
               <% if user != current_user %>
                 <%= link_to chatroom_path(chatroom) do %>
                   <div class="agent-userz d-flex">
-                    <li><%= cl_image_tag user.avatar.key,class:"img-agent-userz"%></li>
+                    <% if user.is_builder != false %>
+                      <li><%= cl_image_tag user.logo.key,class:"img-agent-userz"%></li>
+                    <% else %>
+                      <li><%= cl_image_tag user.avatar.key,class:"img-agent-userz"%></li>
+                    <% end %>
                     <li class="name-agent-userz"><%= user.username%></li>
                   </div>
                 <% end %>
